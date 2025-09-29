@@ -77,5 +77,53 @@ namespace MealPassCapstone.Desktop.GlobalSQL
                 LEFT JOIN dbo.CivilStatus cs
                 ON cs.CivilStatusID = e.CivilStatusID
                 ORDER BY EmployeeID;";
+
+        public static string FilterEmployeeData = @"SELECT EmployeeID
+                                                          ,FirstName
+                                                          ,MiddleName
+                                                          ,LastName
+                                                          ,NameExtension
+                                                          ,Gender
+                                                          ,Birthdate,                          
+                                                           DATEDIFF(YEAR, Birthdate, GETDATE()) 
+                                                          -CASE 
+                                                          WHEN (MONTH(GETDATE()) < MONTH(Birthdate)) 
+                                                          OR (MONTH(GETDATE()) = MONTH(Birthdate) 
+                                                          AND DAY(GETDATE()) < DAY(Birthdate)) 
+                                                          THEN 1 
+                                                          ELSE 0 
+                                                          END AS Age
+                                                          ,ContactNo
+                                                          ,cs.CivilStatusName AS CivilStatus
+                                                          ,e.CivilStatusID
+                                                          ,Username
+                                                          ,e.RoleID
+                                                          ,r.RoleName
+                                                          ,EmploymentStatus
+                                                          ,FailedAttempts
+                                                          ,IsLocked
+                                                      FROM dbo.Employees e
+                                                     LEFT JOIN dbo.Roles r ON r.RoleID = e.RoleID
+                                                     LEFT JOIN dbo.CivilStatus cs
+                                                     ON cs.CivilStatusID = e.CivilStatusID
+                                                     WHERE Username = @Username;";
+
+        public static string UpdateAccount = @"
+            UPDATE dbo.Employees
+            SET 
+                RoleID = @RoleID,
+                FirstName = @FirstName,
+                MiddleName = @MiddleName,
+                LastName = @LastName,
+                NameExtension = @NameExtension,
+                CivilStatusID = @CivilStatusID,
+                Gender = @Gender,
+                Birthdate = @Birthdate,
+                ContactNo = @ContactNo,
+                Username = @Username,
+                EmploymentStatus = @EmploymentStatus,
+                IsLocked = @IsLocked,
+                FailedAttempts = CASE WHEN @IsLocked = 0 THEN 0 ELSE FailedAttempts END
+                WHERE Username = @OriginalUsername";
     }
 }

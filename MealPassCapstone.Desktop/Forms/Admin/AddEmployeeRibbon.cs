@@ -22,6 +22,7 @@ namespace MealPassCapstone.Desktop.Forms.Admin
         public AddEmployeeRibbon()
         {
             InitializeComponent();
+            ApplyTextEditBehaviors();
             passwordBE.Tag = "eyeopen";
             passwordBE.Properties.Buttons[0].ImageOptions.Image = imageCollection1.Images[0];
         }
@@ -42,6 +43,11 @@ namespace MealPassCapstone.Desktop.Forms.Admin
                 passwordBE.Tag = "eyeopen";
                 passwordBE.Properties.UseSystemPasswordChar = true;
             }
+        }
+
+        private void ApplyTextEditBehaviors()
+        {
+            Helpers.TextHelper.AttachBehavior(passwordBE, "Password", true);
         }
 
         private void passwordBE_EditValueChanged(object sender, EventArgs e)
@@ -145,7 +151,7 @@ namespace MealPassCapstone.Desktop.Forms.Admin
                 NameExtension = string.IsNullOrWhiteSpace(extensionTE.Text) || extensionTE.Text == "Extension" ? null : extensionTE.Text,
                 ContactNo = contactTE.Text,
                 CivilStatusID = civilStatusID,
-                Birthdate = birthdateDE.EditValue == null ? (DateTime?)null : (DateTime)birthdateDE.EditValue,
+                Birthdate = (DateTime)(birthdateDE.EditValue == null ? (DateTime?)null : (DateTime)birthdateDE.EditValue),
                 Username = username,
                 Password = hashedPassword,
                 EmploymentStatus = 1,

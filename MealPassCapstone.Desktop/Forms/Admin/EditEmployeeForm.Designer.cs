@@ -29,613 +29,600 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditEmployeeForm));
-            this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.resultcaptionLBL = new DevExpress.XtraEditors.LabelControl();
-            this.resultLBL = new DevExpress.XtraEditors.LabelControl();
-            this.middlenameTE = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.firstnameTE = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.lastnameTE = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.extensionTE = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.contactTE = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.birthdateDE = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.civilstatusCBE = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.genderRG = new DevExpress.XtraEditors.RadioGroup();
-            this.addemployeeBTN = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.positionRG = new DevExpress.XtraEditors.RadioGroup();
-            this.usernameTE = new DevExpress.XtraEditors.TextEdit();
-            this.employeeRG = new DevExpress.XtraEditors.RadioGroup();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.availabilityLC = new DevExpress.XtraEditors.LabelControl();
-            this.accountTS = new DevExpress.XtraEditors.ToggleSwitch();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.changepasswordHLBL = new DevExpress.XtraEditors.HyperlinkLabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.middlenameTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firstnameTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lastnameTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.extensionTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.birthdateDE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.birthdateDE.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.civilstatusCBE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderRG.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionRG.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usernameTE.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeRG.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountTS.Properties)).BeginInit();
-            this.SuspendLayout();
+            ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            resultcaptionLBL = new DevExpress.XtraEditors.LabelControl();
+            resultLBL = new DevExpress.XtraEditors.LabelControl();
+            middlenameTE = new DevExpress.XtraEditors.TextEdit();
+            labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            firstnameTE = new DevExpress.XtraEditors.TextEdit();
+            labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            lastnameTE = new DevExpress.XtraEditors.TextEdit();
+            labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            extensionTE = new DevExpress.XtraEditors.TextEdit();
+            labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            contactTE = new DevExpress.XtraEditors.TextEdit();
+            labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            birthdateDE = new DevExpress.XtraEditors.DateEdit();
+            labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            civilstatusCBE = new DevExpress.XtraEditors.ComboBoxEdit();
+            labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            genderRG = new DevExpress.XtraEditors.RadioGroup();
+            deleteBTN = new DevExpress.XtraEditors.SimpleButton();
+            labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            positionRG = new DevExpress.XtraEditors.RadioGroup();
+            usernameTE = new DevExpress.XtraEditors.TextEdit();
+            employeeRG = new DevExpress.XtraEditors.RadioGroup();
+            labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            availabilityLC = new DevExpress.XtraEditors.LabelControl();
+            accountTS = new DevExpress.XtraEditors.ToggleSwitch();
+            labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            changepasswordHLBL = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            saveBTN = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)middlenameTE.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)firstnameTE.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lastnameTE.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)extensionTE.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)contactTE.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)birthdateDE.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)birthdateDE.Properties.CalendarTimeProperties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)civilstatusCBE.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)genderRG.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)positionRG.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)usernameTE.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)employeeRG.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)accountTS.Properties).BeginInit();
+            SuspendLayout();
             // 
             // ribbon
             // 
-            this.ribbon.ExpandCollapseItem.Id = 0;
-            this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbon.ExpandCollapseItem});
-            this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 1;
-            this.ribbon.Name = "ribbon";
-            this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
-            this.ribbon.Size = new System.Drawing.Size(1017, 49);
+            ribbon.ExpandCollapseItem.Id = 0;
+            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem });
+            ribbon.Location = new System.Drawing.Point(0, 0);
+            ribbon.MaxItemId = 1;
+            ribbon.Name = "ribbon";
+            ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage1 });
+            ribbon.Size = new System.Drawing.Size(1017, 49);
             // 
             // ribbonPage1
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1 });
+            ribbonPage1.Name = "ribbonPage1";
+            ribbonPage1.Text = "ribbonPage1";
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            ribbonPageGroup1.Name = "ribbonPageGroup1";
+            ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
             // resultcaptionLBL
             // 
-            this.resultcaptionLBL.Location = new System.Drawing.Point(399, 247);
-            this.resultcaptionLBL.Name = "resultcaptionLBL";
-            this.resultcaptionLBL.Size = new System.Drawing.Size(0, 13);
-            this.resultcaptionLBL.TabIndex = 85;
+            resultcaptionLBL.Location = new System.Drawing.Point(399, 247);
+            resultcaptionLBL.Name = "resultcaptionLBL";
+            resultcaptionLBL.Size = new System.Drawing.Size(0, 13);
+            resultcaptionLBL.TabIndex = 85;
             // 
             // resultLBL
             // 
-            this.resultLBL.Location = new System.Drawing.Point(399, 231);
-            this.resultLBL.Name = "resultLBL";
-            this.resultLBL.Size = new System.Drawing.Size(0, 13);
-            this.resultLBL.TabIndex = 84;
+            resultLBL.Location = new System.Drawing.Point(399, 231);
+            resultLBL.Name = "resultLBL";
+            resultLBL.Size = new System.Drawing.Size(0, 13);
+            resultLBL.TabIndex = 84;
             // 
             // middlenameTE
             // 
-            this.middlenameTE.EditValue = "";
-            this.middlenameTE.Location = new System.Drawing.Point(221, 75);
-            this.middlenameTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.middlenameTE.Name = "middlenameTE";
-            this.middlenameTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.middlenameTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
-            this.middlenameTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middlenameTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.middlenameTE.Properties.Appearance.Options.UseBackColor = true;
-            this.middlenameTE.Properties.Appearance.Options.UseBorderColor = true;
-            this.middlenameTE.Properties.Appearance.Options.UseFont = true;
-            this.middlenameTE.Properties.Appearance.Options.UseForeColor = true;
-            this.middlenameTE.Properties.AutoHeight = false;
-            this.middlenameTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.middlenameTE.Size = new System.Drawing.Size(172, 28);
-            this.middlenameTE.TabIndex = 62;
+            middlenameTE.EditValue = "";
+            middlenameTE.Location = new System.Drawing.Point(221, 75);
+            middlenameTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            middlenameTE.Name = "middlenameTE";
+            middlenameTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
+            middlenameTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
+            middlenameTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            middlenameTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            middlenameTE.Properties.Appearance.Options.UseBackColor = true;
+            middlenameTE.Properties.Appearance.Options.UseBorderColor = true;
+            middlenameTE.Properties.Appearance.Options.UseFont = true;
+            middlenameTE.Properties.Appearance.Options.UseForeColor = true;
+            middlenameTE.Properties.AutoHeight = false;
+            middlenameTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            middlenameTE.Size = new System.Drawing.Size(172, 28);
+            middlenameTE.TabIndex = 62;
             // 
             // labelControl10
             // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Appearance.Options.UseForeColor = true;
-            this.labelControl10.Location = new System.Drawing.Point(30, 265);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(64, 16);
-            this.labelControl10.TabIndex = 82;
-            this.labelControl10.Text = "Username";
+            labelControl10.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl10.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl10.Appearance.Options.UseFont = true;
+            labelControl10.Appearance.Options.UseForeColor = true;
+            labelControl10.Location = new System.Drawing.Point(30, 265);
+            labelControl10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl10.Name = "labelControl10";
+            labelControl10.Size = new System.Drawing.Size(64, 16);
+            labelControl10.TabIndex = 82;
+            labelControl10.Text = "Username";
             // 
             // firstnameTE
             // 
-            this.firstnameTE.EditValue = "";
-            this.firstnameTE.Location = new System.Drawing.Point(28, 75);
-            this.firstnameTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.firstnameTE.Name = "firstnameTE";
-            this.firstnameTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.firstnameTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
-            this.firstnameTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstnameTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.firstnameTE.Properties.Appearance.Options.UseBackColor = true;
-            this.firstnameTE.Properties.Appearance.Options.UseBorderColor = true;
-            this.firstnameTE.Properties.Appearance.Options.UseFont = true;
-            this.firstnameTE.Properties.Appearance.Options.UseForeColor = true;
-            this.firstnameTE.Properties.AutoHeight = false;
-            this.firstnameTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.firstnameTE.Size = new System.Drawing.Size(172, 28);
-            this.firstnameTE.TabIndex = 61;
+            firstnameTE.EditValue = "";
+            firstnameTE.Location = new System.Drawing.Point(28, 75);
+            firstnameTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            firstnameTE.Name = "firstnameTE";
+            firstnameTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
+            firstnameTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
+            firstnameTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            firstnameTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            firstnameTE.Properties.Appearance.Options.UseBackColor = true;
+            firstnameTE.Properties.Appearance.Options.UseBorderColor = true;
+            firstnameTE.Properties.Appearance.Options.UseFont = true;
+            firstnameTE.Properties.Appearance.Options.UseForeColor = true;
+            firstnameTE.Properties.AutoHeight = false;
+            firstnameTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            firstnameTE.Size = new System.Drawing.Size(172, 28);
+            firstnameTE.TabIndex = 61;
             // 
             // labelControl9
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Location = new System.Drawing.Point(224, 188);
-            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(71, 16);
-            this.labelControl9.TabIndex = 81;
-            this.labelControl9.Text = "Civil Status";
+            labelControl9.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl9.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl9.Appearance.Options.UseFont = true;
+            labelControl9.Appearance.Options.UseForeColor = true;
+            labelControl9.Location = new System.Drawing.Point(224, 188);
+            labelControl9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl9.Name = "labelControl9";
+            labelControl9.Size = new System.Drawing.Size(71, 16);
+            labelControl9.TabIndex = 81;
+            labelControl9.Text = "Civil Status";
             // 
             // lastnameTE
             // 
-            this.lastnameTE.EditValue = "";
-            this.lastnameTE.Location = new System.Drawing.Point(413, 75);
-            this.lastnameTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lastnameTE.Name = "lastnameTE";
-            this.lastnameTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.lastnameTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
-            this.lastnameTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastnameTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lastnameTE.Properties.Appearance.Options.UseBackColor = true;
-            this.lastnameTE.Properties.Appearance.Options.UseBorderColor = true;
-            this.lastnameTE.Properties.Appearance.Options.UseFont = true;
-            this.lastnameTE.Properties.Appearance.Options.UseForeColor = true;
-            this.lastnameTE.Properties.AutoHeight = false;
-            this.lastnameTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.lastnameTE.Size = new System.Drawing.Size(172, 28);
-            this.lastnameTE.TabIndex = 63;
+            lastnameTE.EditValue = "";
+            lastnameTE.Location = new System.Drawing.Point(413, 75);
+            lastnameTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            lastnameTE.Name = "lastnameTE";
+            lastnameTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
+            lastnameTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
+            lastnameTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            lastnameTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            lastnameTE.Properties.Appearance.Options.UseBackColor = true;
+            lastnameTE.Properties.Appearance.Options.UseBorderColor = true;
+            lastnameTE.Properties.Appearance.Options.UseFont = true;
+            lastnameTE.Properties.Appearance.Options.UseForeColor = true;
+            lastnameTE.Properties.AutoHeight = false;
+            lastnameTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            lastnameTE.Size = new System.Drawing.Size(172, 28);
+            lastnameTE.TabIndex = 63;
             // 
             // labelControl8
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(30, 188);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(59, 16);
-            this.labelControl8.TabIndex = 80;
-            this.labelControl8.Text = "Birthdate";
+            labelControl8.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl8.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl8.Appearance.Options.UseFont = true;
+            labelControl8.Appearance.Options.UseForeColor = true;
+            labelControl8.Location = new System.Drawing.Point(30, 188);
+            labelControl8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl8.Name = "labelControl8";
+            labelControl8.Size = new System.Drawing.Size(59, 16);
+            labelControl8.TabIndex = 80;
+            labelControl8.Text = "Birthdate";
             // 
             // extensionTE
             // 
-            this.extensionTE.EditValue = "";
-            this.extensionTE.Location = new System.Drawing.Point(606, 75);
-            this.extensionTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.extensionTE.Name = "extensionTE";
-            this.extensionTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.extensionTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
-            this.extensionTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.extensionTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.extensionTE.Properties.Appearance.Options.UseBackColor = true;
-            this.extensionTE.Properties.Appearance.Options.UseBorderColor = true;
-            this.extensionTE.Properties.Appearance.Options.UseFont = true;
-            this.extensionTE.Properties.Appearance.Options.UseForeColor = true;
-            this.extensionTE.Properties.AutoHeight = false;
-            this.extensionTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.extensionTE.Size = new System.Drawing.Size(172, 28);
-            this.extensionTE.TabIndex = 64;
+            extensionTE.EditValue = "";
+            extensionTE.Location = new System.Drawing.Point(606, 75);
+            extensionTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            extensionTE.Name = "extensionTE";
+            extensionTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
+            extensionTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
+            extensionTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            extensionTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            extensionTE.Properties.Appearance.Options.UseBackColor = true;
+            extensionTE.Properties.Appearance.Options.UseBorderColor = true;
+            extensionTE.Properties.Appearance.Options.UseFont = true;
+            extensionTE.Properties.Appearance.Options.UseForeColor = true;
+            extensionTE.Properties.AutoHeight = false;
+            extensionTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            extensionTE.Size = new System.Drawing.Size(172, 28);
+            extensionTE.TabIndex = 64;
             // 
             // labelControl7
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(803, 112);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(77, 16);
-            this.labelControl7.TabIndex = 79;
-            this.labelControl7.Text = "Contact No.";
+            labelControl7.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl7.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl7.Appearance.Options.UseFont = true;
+            labelControl7.Appearance.Options.UseForeColor = true;
+            labelControl7.Location = new System.Drawing.Point(803, 112);
+            labelControl7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl7.Name = "labelControl7";
+            labelControl7.Size = new System.Drawing.Size(77, 16);
+            labelControl7.TabIndex = 79;
+            labelControl7.Text = "Contact No.";
             // 
             // contactTE
             // 
-            this.contactTE.EditValue = "";
-            this.contactTE.Location = new System.Drawing.Point(799, 75);
-            this.contactTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.contactTE.Name = "contactTE";
-            this.contactTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.contactTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
-            this.contactTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contactTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.contactTE.Properties.Appearance.Options.UseBackColor = true;
-            this.contactTE.Properties.Appearance.Options.UseBorderColor = true;
-            this.contactTE.Properties.Appearance.Options.UseFont = true;
-            this.contactTE.Properties.Appearance.Options.UseForeColor = true;
-            this.contactTE.Properties.AutoHeight = false;
-            this.contactTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.contactTE.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
-            this.contactTE.Properties.MaskSettings.Set("mask", "(000) 000-0000");
-            this.contactTE.Size = new System.Drawing.Size(172, 28);
-            this.contactTE.TabIndex = 65;
+            contactTE.EditValue = "";
+            contactTE.Location = new System.Drawing.Point(799, 75);
+            contactTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            contactTE.Name = "contactTE";
+            contactTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
+            contactTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
+            contactTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            contactTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            contactTE.Properties.Appearance.Options.UseBackColor = true;
+            contactTE.Properties.Appearance.Options.UseBorderColor = true;
+            contactTE.Properties.Appearance.Options.UseFont = true;
+            contactTE.Properties.Appearance.Options.UseForeColor = true;
+            contactTE.Properties.AutoHeight = false;
+            contactTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            contactTE.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            contactTE.Properties.MaskSettings.Set("mask", "(000) 000-0000");
+            contactTE.Size = new System.Drawing.Size(172, 28);
+            contactTE.TabIndex = 65;
             // 
             // labelControl6
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(610, 112);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(103, 16);
-            this.labelControl6.TabIndex = 78;
-            this.labelControl6.Text = "Name Extension";
+            labelControl6.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl6.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl6.Appearance.Options.UseFont = true;
+            labelControl6.Appearance.Options.UseForeColor = true;
+            labelControl6.Location = new System.Drawing.Point(610, 112);
+            labelControl6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl6.Name = "labelControl6";
+            labelControl6.Size = new System.Drawing.Size(103, 16);
+            labelControl6.TabIndex = 78;
+            labelControl6.Text = "Name Extension";
             // 
             // birthdateDE
             // 
-            this.birthdateDE.EditValue = null;
-            this.birthdateDE.Location = new System.Drawing.Point(28, 150);
-            this.birthdateDE.MenuManager = this.ribbon;
-            this.birthdateDE.Name = "birthdateDE";
-            this.birthdateDE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.birthdateDE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birthdateDE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.birthdateDE.Properties.Appearance.Options.UseBackColor = true;
-            this.birthdateDE.Properties.Appearance.Options.UseFont = true;
-            this.birthdateDE.Properties.Appearance.Options.UseForeColor = true;
-            this.birthdateDE.Properties.AutoHeight = false;
-            this.birthdateDE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.birthdateDE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.birthdateDE.Size = new System.Drawing.Size(172, 28);
-            this.birthdateDE.TabIndex = 66;
+            birthdateDE.EditValue = null;
+            birthdateDE.Location = new System.Drawing.Point(28, 150);
+            birthdateDE.MenuManager = ribbon;
+            birthdateDE.Name = "birthdateDE";
+            birthdateDE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
+            birthdateDE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            birthdateDE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            birthdateDE.Properties.Appearance.Options.UseBackColor = true;
+            birthdateDE.Properties.Appearance.Options.UseFont = true;
+            birthdateDE.Properties.Appearance.Options.UseForeColor = true;
+            birthdateDE.Properties.AutoHeight = false;
+            birthdateDE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            birthdateDE.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            birthdateDE.Size = new System.Drawing.Size(172, 28);
+            birthdateDE.TabIndex = 66;
             // 
             // labelControl5
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(416, 112);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(62, 16);
-            this.labelControl5.TabIndex = 77;
-            this.labelControl5.Text = "Lastname";
+            labelControl5.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl5.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl5.Appearance.Options.UseFont = true;
+            labelControl5.Appearance.Options.UseForeColor = true;
+            labelControl5.Location = new System.Drawing.Point(416, 112);
+            labelControl5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl5.Name = "labelControl5";
+            labelControl5.Size = new System.Drawing.Size(62, 16);
+            labelControl5.TabIndex = 77;
+            labelControl5.Text = "Lastname";
             // 
             // civilstatusCBE
             // 
-            this.civilstatusCBE.Location = new System.Drawing.Point(221, 150);
-            this.civilstatusCBE.MenuManager = this.ribbon;
-            this.civilstatusCBE.Name = "civilstatusCBE";
-            this.civilstatusCBE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.civilstatusCBE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.civilstatusCBE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.civilstatusCBE.Properties.Appearance.Options.UseBackColor = true;
-            this.civilstatusCBE.Properties.Appearance.Options.UseFont = true;
-            this.civilstatusCBE.Properties.Appearance.Options.UseForeColor = true;
-            this.civilstatusCBE.Properties.AutoHeight = false;
-            this.civilstatusCBE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.civilstatusCBE.Properties.Items.AddRange(new object[] {
-            "Single",
-            "Married",
-            "Widowed",
-            "Separated"});
-            this.civilstatusCBE.Size = new System.Drawing.Size(172, 28);
-            this.civilstatusCBE.TabIndex = 67;
+            civilstatusCBE.Location = new System.Drawing.Point(221, 150);
+            civilstatusCBE.MenuManager = ribbon;
+            civilstatusCBE.Name = "civilstatusCBE";
+            civilstatusCBE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
+            civilstatusCBE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            civilstatusCBE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            civilstatusCBE.Properties.Appearance.Options.UseBackColor = true;
+            civilstatusCBE.Properties.Appearance.Options.UseFont = true;
+            civilstatusCBE.Properties.Appearance.Options.UseForeColor = true;
+            civilstatusCBE.Properties.AutoHeight = false;
+            civilstatusCBE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            civilstatusCBE.Properties.Items.AddRange(new object[] { "Single", "Married", "Widowed", "Separated" });
+            civilstatusCBE.Size = new System.Drawing.Size(172, 28);
+            civilstatusCBE.TabIndex = 67;
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(224, 112);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(83, 16);
-            this.labelControl2.TabIndex = 76;
-            this.labelControl2.Text = "Middlename";
+            labelControl2.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl2.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl2.Appearance.Options.UseFont = true;
+            labelControl2.Appearance.Options.UseForeColor = true;
+            labelControl2.Location = new System.Drawing.Point(224, 112);
+            labelControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl2.Name = "labelControl2";
+            labelControl2.Size = new System.Drawing.Size(83, 16);
+            labelControl2.TabIndex = 76;
+            labelControl2.Text = "Middlename";
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(416, 147);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(49, 16);
-            this.labelControl4.TabIndex = 68;
-            this.labelControl4.Text = "Gender";
+            labelControl4.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl4.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl4.Appearance.Options.UseFont = true;
+            labelControl4.Appearance.Options.UseForeColor = true;
+            labelControl4.Location = new System.Drawing.Point(416, 147);
+            labelControl4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl4.Name = "labelControl4";
+            labelControl4.Size = new System.Drawing.Size(49, 16);
+            labelControl4.TabIndex = 68;
+            labelControl4.Text = "Gender";
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(30, 112);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(62, 16);
-            this.labelControl1.TabIndex = 75;
-            this.labelControl1.Text = "Firstname";
+            labelControl1.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl1.Appearance.Options.UseFont = true;
+            labelControl1.Appearance.Options.UseForeColor = true;
+            labelControl1.Location = new System.Drawing.Point(30, 112);
+            labelControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl1.Name = "labelControl1";
+            labelControl1.Size = new System.Drawing.Size(62, 16);
+            labelControl1.TabIndex = 75;
+            labelControl1.Text = "Firstname";
             // 
             // genderRG
             // 
-            this.genderRG.Location = new System.Drawing.Point(428, 174);
-            this.genderRG.Name = "genderRG";
-            this.genderRG.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.genderRG.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
-            this.genderRG.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.genderRG.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.genderRG.Properties.Appearance.Options.UseBackColor = true;
-            this.genderRG.Properties.Appearance.Options.UseBorderColor = true;
-            this.genderRG.Properties.Appearance.Options.UseFont = true;
-            this.genderRG.Properties.Appearance.Options.UseForeColor = true;
-            this.genderRG.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.Transparent;
-            this.genderRG.Properties.AppearanceDisabled.Options.UseBorderColor = true;
-            this.genderRG.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.genderRG.Properties.Columns = 2;
-            this.genderRG.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Male", "Male", true, "Male", "Male"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem("Female", "Female", true, "Female", "Female")});
-            this.genderRG.Size = new System.Drawing.Size(157, 30);
-            this.genderRG.TabIndex = 69;
+            genderRG.Location = new System.Drawing.Point(428, 174);
+            genderRG.Name = "genderRG";
+            genderRG.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            genderRG.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            genderRG.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            genderRG.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            genderRG.Properties.Appearance.Options.UseBackColor = true;
+            genderRG.Properties.Appearance.Options.UseBorderColor = true;
+            genderRG.Properties.Appearance.Options.UseFont = true;
+            genderRG.Properties.Appearance.Options.UseForeColor = true;
+            genderRG.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.Transparent;
+            genderRG.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            genderRG.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            genderRG.Properties.Columns = 2;
+            genderRG.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] { new DevExpress.XtraEditors.Controls.RadioGroupItem("Male", "Male", true, "Male", "Male"), new DevExpress.XtraEditors.Controls.RadioGroupItem("Female", "Female", true, "Female", "Female") });
+            genderRG.Size = new System.Drawing.Size(157, 30);
+            genderRG.TabIndex = 69;
             // 
-            // addemployeeBTN
+            // deleteBTN
             // 
-            this.addemployeeBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.addemployeeBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addemployeeBTN.Appearance.Options.UseBackColor = true;
-            this.addemployeeBTN.Appearance.Options.UseFont = true;
-            this.addemployeeBTN.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addemployeeBTN.ImageOptions.Image")));
-            this.addemployeeBTN.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
-            this.addemployeeBTN.Location = new System.Drawing.Point(841, 253);
-            this.addemployeeBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.addemployeeBTN.Name = "addemployeeBTN";
-            this.addemployeeBTN.Padding = new System.Windows.Forms.Padding(2);
-            this.addemployeeBTN.Size = new System.Drawing.Size(155, 44);
-            this.addemployeeBTN.TabIndex = 74;
-            this.addemployeeBTN.Text = "Delete Employee";
+            deleteBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(255, 87, 87);
+            deleteBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            deleteBTN.Appearance.Options.UseBackColor = true;
+            deleteBTN.Appearance.Options.UseFont = true;
+            deleteBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("addemployeeBTN.ImageOptions.Image");
+            deleteBTN.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
+            deleteBTN.Location = new System.Drawing.Point(841, 253);
+            deleteBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            deleteBTN.Name = "deleteBTN";
+            deleteBTN.Padding = new System.Windows.Forms.Padding(2);
+            deleteBTN.Size = new System.Drawing.Size(155, 44);
+            deleteBTN.TabIndex = 74;
+            deleteBTN.Text = "Delete Employee";
+            deleteBTN.Click += deleteBTN_Click;
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(610, 150);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(49, 16);
-            this.labelControl3.TabIndex = 71;
-            this.labelControl3.Text = "Position";
+            labelControl3.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl3.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl3.Appearance.Options.UseFont = true;
+            labelControl3.Appearance.Options.UseForeColor = true;
+            labelControl3.Location = new System.Drawing.Point(610, 150);
+            labelControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl3.Name = "labelControl3";
+            labelControl3.Size = new System.Drawing.Size(49, 16);
+            labelControl3.TabIndex = 71;
+            labelControl3.Text = "Position";
             // 
             // positionRG
             // 
-            this.positionRG.Location = new System.Drawing.Point(624, 174);
-            this.positionRG.Name = "positionRG";
-            this.positionRG.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.positionRG.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
-            this.positionRG.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.positionRG.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.positionRG.Properties.Appearance.Options.UseBackColor = true;
-            this.positionRG.Properties.Appearance.Options.UseBorderColor = true;
-            this.positionRG.Properties.Appearance.Options.UseFont = true;
-            this.positionRG.Properties.Appearance.Options.UseForeColor = true;
-            this.positionRG.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.Transparent;
-            this.positionRG.Properties.AppearanceDisabled.Options.UseBorderColor = true;
-            this.positionRG.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.positionRG.Properties.Columns = 2;
-            this.positionRG.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(1)), "Admin", true, "Admin", "Admin"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(((short)(2)), "Staff", true, "Staff", "Staff")});
-            this.positionRG.Size = new System.Drawing.Size(142, 30);
-            this.positionRG.TabIndex = 70;
+            positionRG.Location = new System.Drawing.Point(624, 174);
+            positionRG.Name = "positionRG";
+            positionRG.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            positionRG.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            positionRG.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            positionRG.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            positionRG.Properties.Appearance.Options.UseBackColor = true;
+            positionRG.Properties.Appearance.Options.UseBorderColor = true;
+            positionRG.Properties.Appearance.Options.UseFont = true;
+            positionRG.Properties.Appearance.Options.UseForeColor = true;
+            positionRG.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.Transparent;
+            positionRG.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            positionRG.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            positionRG.Properties.Columns = 2;
+            positionRG.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] { new DevExpress.XtraEditors.Controls.RadioGroupItem((short)1, "Admin", true, "Admin", "Admin"), new DevExpress.XtraEditors.Controls.RadioGroupItem((short)2, "Staff", true, "Staff", "Staff") });
+            positionRG.Size = new System.Drawing.Size(142, 30);
+            positionRG.TabIndex = 70;
             // 
             // usernameTE
             // 
-            this.usernameTE.EditValue = "";
-            this.usernameTE.Location = new System.Drawing.Point(28, 231);
-            this.usernameTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.usernameTE.Name = "usernameTE";
-            this.usernameTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(93)))), ((int)(((byte)(93)))));
-            this.usernameTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
-            this.usernameTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.usernameTE.Properties.Appearance.Options.UseBackColor = true;
-            this.usernameTE.Properties.Appearance.Options.UseBorderColor = true;
-            this.usernameTE.Properties.Appearance.Options.UseFont = true;
-            this.usernameTE.Properties.Appearance.Options.UseForeColor = true;
-            this.usernameTE.Properties.AutoHeight = false;
-            this.usernameTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.usernameTE.Size = new System.Drawing.Size(172, 28);
-            this.usernameTE.TabIndex = 72;
+            usernameTE.EditValue = "";
+            usernameTE.Location = new System.Drawing.Point(28, 231);
+            usernameTE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            usernameTE.Name = "usernameTE";
+            usernameTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
+            usernameTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
+            usernameTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            usernameTE.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            usernameTE.Properties.Appearance.Options.UseBackColor = true;
+            usernameTE.Properties.Appearance.Options.UseBorderColor = true;
+            usernameTE.Properties.Appearance.Options.UseFont = true;
+            usernameTE.Properties.Appearance.Options.UseForeColor = true;
+            usernameTE.Properties.AutoHeight = false;
+            usernameTE.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            usernameTE.Size = new System.Drawing.Size(172, 28);
+            usernameTE.TabIndex = 72;
             // 
             // employeeRG
             // 
-            this.employeeRG.Location = new System.Drawing.Point(793, 175);
-            this.employeeRG.Name = "employeeRG";
-            this.employeeRG.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.employeeRG.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
-            this.employeeRG.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employeeRG.Properties.Appearance.ForeColor = System.Drawing.Color.White;
-            this.employeeRG.Properties.Appearance.Options.UseBackColor = true;
-            this.employeeRG.Properties.Appearance.Options.UseBorderColor = true;
-            this.employeeRG.Properties.Appearance.Options.UseFont = true;
-            this.employeeRG.Properties.Appearance.Options.UseForeColor = true;
-            this.employeeRG.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.Transparent;
-            this.employeeRG.Properties.AppearanceDisabled.Options.UseBorderColor = true;
-            this.employeeRG.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.employeeRG.Properties.Columns = 2;
-            this.employeeRG.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Active", true, "Active", "Active"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "In-Active", true, "In-Active", "In-Active")});
-            this.employeeRG.Size = new System.Drawing.Size(168, 30);
-            this.employeeRG.TabIndex = 87;
+            employeeRG.Location = new System.Drawing.Point(793, 175);
+            employeeRG.Name = "employeeRG";
+            employeeRG.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            employeeRG.Properties.Appearance.BorderColor = System.Drawing.Color.Transparent;
+            employeeRG.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            employeeRG.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            employeeRG.Properties.Appearance.Options.UseBackColor = true;
+            employeeRG.Properties.Appearance.Options.UseBorderColor = true;
+            employeeRG.Properties.Appearance.Options.UseFont = true;
+            employeeRG.Properties.Appearance.Options.UseForeColor = true;
+            employeeRG.Properties.AppearanceDisabled.BorderColor = System.Drawing.Color.Transparent;
+            employeeRG.Properties.AppearanceDisabled.Options.UseBorderColor = true;
+            employeeRG.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            employeeRG.Properties.Columns = 2;
+            employeeRG.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] { new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Active", true, "Active", "Active"), new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "In-Active", true, "In-Active", "In-Active") });
+            employeeRG.Size = new System.Drawing.Size(168, 30);
+            employeeRG.TabIndex = 87;
             // 
             // labelControl12
             // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Appearance.Options.UseForeColor = true;
-            this.labelControl12.Location = new System.Drawing.Point(783, 151);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(106, 16);
-            this.labelControl12.TabIndex = 86;
-            this.labelControl12.Text = "Employee Status";
+            labelControl12.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl12.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl12.Appearance.Options.UseFont = true;
+            labelControl12.Appearance.Options.UseForeColor = true;
+            labelControl12.Location = new System.Drawing.Point(783, 151);
+            labelControl12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl12.Name = "labelControl12";
+            labelControl12.Size = new System.Drawing.Size(106, 16);
+            labelControl12.TabIndex = 86;
+            labelControl12.Text = "Employee Status";
             // 
             // availabilityLC
             // 
-            this.availabilityLC.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.availabilityLC.Appearance.ForeColor = System.Drawing.Color.White;
-            this.availabilityLC.Appearance.Options.UseFont = true;
-            this.availabilityLC.Appearance.Options.UseForeColor = true;
-            this.availabilityLC.Location = new System.Drawing.Point(317, 239);
-            this.availabilityLC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.availabilityLC.Name = "availabilityLC";
-            this.availabilityLC.Size = new System.Drawing.Size(44, 16);
-            this.availabilityLC.TabIndex = 89;
-            this.availabilityLC.Text = "Locked";
+            availabilityLC.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            availabilityLC.Appearance.ForeColor = System.Drawing.Color.White;
+            availabilityLC.Appearance.Options.UseFont = true;
+            availabilityLC.Appearance.Options.UseForeColor = true;
+            availabilityLC.Location = new System.Drawing.Point(317, 239);
+            availabilityLC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            availabilityLC.Name = "availabilityLC";
+            availabilityLC.Size = new System.Drawing.Size(44, 16);
+            availabilityLC.TabIndex = 89;
+            availabilityLC.Text = "Locked";
             // 
             // accountTS
             // 
-            this.accountTS.EditValue = true;
-            this.accountTS.Location = new System.Drawing.Point(213, 229);
-            this.accountTS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.accountTS.Name = "accountTS";
-            this.accountTS.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accountTS.Properties.Appearance.Options.UseFont = true;
-            this.accountTS.Properties.AutoHeight = false;
-            this.accountTS.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.accountTS.Properties.LookAndFeel.SkinMaskColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(89)))), ((int)(((byte)(142)))));
-            this.accountTS.Properties.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(87)))));
-            this.accountTS.Properties.LookAndFeel.SkinName = "The Bezier";
-            this.accountTS.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.accountTS.Properties.OffText = "Off";
-            this.accountTS.Properties.OnText = "On";
-            this.accountTS.Properties.ThumbWidth = 10;
-            this.accountTS.Size = new System.Drawing.Size(105, 35);
-            this.accountTS.TabIndex = 88;
+            accountTS.EditValue = true;
+            accountTS.Location = new System.Drawing.Point(213, 229);
+            accountTS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            accountTS.Name = "accountTS";
+            accountTS.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            accountTS.Properties.Appearance.Options.UseFont = true;
+            accountTS.Properties.AutoHeight = false;
+            accountTS.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Center;
+            accountTS.Properties.LookAndFeel.SkinMaskColor = System.Drawing.Color.FromArgb(44, 89, 142);
+            accountTS.Properties.LookAndFeel.SkinMaskColor2 = System.Drawing.Color.FromArgb(255, 87, 87);
+            accountTS.Properties.LookAndFeel.SkinName = "The Bezier";
+            accountTS.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            accountTS.Properties.OffText = "Off";
+            accountTS.Properties.OnText = "On";
+            accountTS.Properties.ThumbWidth = 10;
+            accountTS.Size = new System.Drawing.Size(105, 35);
+            accountTS.TabIndex = 88;
+            accountTS.Toggled += accountTS_Toggled;
             // 
             // labelControl11
             // 
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Appearance.Options.UseForeColor = true;
-            this.labelControl11.Location = new System.Drawing.Point(487, 267);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(102, 16);
-            this.labelControl11.TabIndex = 91;
-            this.labelControl11.Text = "Forgot Password?";
+            labelControl11.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl11.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl11.Appearance.Options.UseFont = true;
+            labelControl11.Appearance.Options.UseForeColor = true;
+            labelControl11.Location = new System.Drawing.Point(487, 267);
+            labelControl11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            labelControl11.Name = "labelControl11";
+            labelControl11.Size = new System.Drawing.Size(102, 16);
+            labelControl11.TabIndex = 91;
+            labelControl11.Text = "Forgot Password?";
             // 
             // changepasswordHLBL
             // 
-            this.changepasswordHLBL.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changepasswordHLBL.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
-            this.changepasswordHLBL.Appearance.Options.UseFont = true;
-            this.changepasswordHLBL.Appearance.Options.UseForeColor = true;
-            this.changepasswordHLBL.Location = new System.Drawing.Point(595, 267);
-            this.changepasswordHLBL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.changepasswordHLBL.Name = "changepasswordHLBL";
-            this.changepasswordHLBL.Size = new System.Drawing.Size(64, 16);
-            this.changepasswordHLBL.TabIndex = 90;
-            this.changepasswordHLBL.Text = "Click Here!";
-            this.changepasswordHLBL.Click += new System.EventHandler(this.changepasswordHLBL_Click);
+            changepasswordHLBL.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            changepasswordHLBL.Appearance.ForeColor = System.Drawing.Color.FromArgb(0, 191, 99);
+            changepasswordHLBL.Appearance.Options.UseFont = true;
+            changepasswordHLBL.Appearance.Options.UseForeColor = true;
+            changepasswordHLBL.Location = new System.Drawing.Point(595, 267);
+            changepasswordHLBL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            changepasswordHLBL.Name = "changepasswordHLBL";
+            changepasswordHLBL.Size = new System.Drawing.Size(64, 16);
+            changepasswordHLBL.TabIndex = 90;
+            changepasswordHLBL.Text = "Click Here!";
+            changepasswordHLBL.Click += changepasswordHLBL_Click;
             // 
-            // simpleButton1
+            // saveBTN
             // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
-            this.simpleButton1.Location = new System.Drawing.Point(675, 253);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Padding = new System.Windows.Forms.Padding(2);
-            this.simpleButton1.Size = new System.Drawing.Size(155, 44);
-            this.simpleButton1.TabIndex = 92;
-            this.simpleButton1.Text = "Save Changes";
+            saveBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(0, 151, 178);
+            saveBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            saveBTN.Appearance.Options.UseBackColor = true;
+            saveBTN.Appearance.Options.UseFont = true;
+            saveBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("saveBTN.ImageOptions.Image");
+            saveBTN.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
+            saveBTN.Location = new System.Drawing.Point(675, 253);
+            saveBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            saveBTN.Name = "saveBTN";
+            saveBTN.Padding = new System.Windows.Forms.Padding(2);
+            saveBTN.Size = new System.Drawing.Size(155, 44);
+            saveBTN.TabIndex = 92;
+            saveBTN.Text = "Save Changes";
+            saveBTN.Click += saveBTN_Click;
             // 
             // EditEmployeeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 314);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.labelControl11);
-            this.Controls.Add(this.changepasswordHLBL);
-            this.Controls.Add(this.availabilityLC);
-            this.Controls.Add(this.accountTS);
-            this.Controls.Add(this.employeeRG);
-            this.Controls.Add(this.labelControl12);
-            this.Controls.Add(this.resultcaptionLBL);
-            this.Controls.Add(this.resultLBL);
-            this.Controls.Add(this.middlenameTE);
-            this.Controls.Add(this.labelControl10);
-            this.Controls.Add(this.firstnameTE);
-            this.Controls.Add(this.labelControl9);
-            this.Controls.Add(this.lastnameTE);
-            this.Controls.Add(this.labelControl8);
-            this.Controls.Add(this.extensionTE);
-            this.Controls.Add(this.labelControl7);
-            this.Controls.Add(this.contactTE);
-            this.Controls.Add(this.labelControl6);
-            this.Controls.Add(this.birthdateDE);
-            this.Controls.Add(this.labelControl5);
-            this.Controls.Add(this.civilstatusCBE);
-            this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.labelControl4);
-            this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.genderRG);
-            this.Controls.Add(this.addemployeeBTN);
-            this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.positionRG);
-            this.Controls.Add(this.usernameTE);
-            this.Controls.Add(this.ribbon);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("EditEmployeeForm.IconOptions.SvgImage")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "EditEmployeeForm";
-            this.Ribbon = this.ribbon;
-            this.RibbonVisibility = DevExpress.XtraBars.Ribbon.RibbonVisibility.Hidden;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit Employee";
-            ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.middlenameTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.firstnameTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lastnameTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.extensionTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contactTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.birthdateDE.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.birthdateDE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.civilstatusCBE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderRG.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.positionRG.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usernameTE.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeRG.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountTS.Properties)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1017, 314);
+            Controls.Add(saveBTN);
+            Controls.Add(labelControl11);
+            Controls.Add(changepasswordHLBL);
+            Controls.Add(availabilityLC);
+            Controls.Add(accountTS);
+            Controls.Add(employeeRG);
+            Controls.Add(labelControl12);
+            Controls.Add(resultcaptionLBL);
+            Controls.Add(resultLBL);
+            Controls.Add(middlenameTE);
+            Controls.Add(labelControl10);
+            Controls.Add(firstnameTE);
+            Controls.Add(labelControl9);
+            Controls.Add(lastnameTE);
+            Controls.Add(labelControl8);
+            Controls.Add(extensionTE);
+            Controls.Add(labelControl7);
+            Controls.Add(contactTE);
+            Controls.Add(labelControl6);
+            Controls.Add(birthdateDE);
+            Controls.Add(labelControl5);
+            Controls.Add(civilstatusCBE);
+            Controls.Add(labelControl2);
+            Controls.Add(labelControl4);
+            Controls.Add(labelControl1);
+            Controls.Add(genderRG);
+            Controls.Add(deleteBTN);
+            Controls.Add(labelControl3);
+            Controls.Add(positionRG);
+            Controls.Add(usernameTE);
+            Controls.Add(ribbon);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            IconOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("EditEmployeeForm.IconOptions.SvgImage");
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "EditEmployeeForm";
+            Ribbon = ribbon;
+            RibbonVisibility = DevExpress.XtraBars.Ribbon.RibbonVisibility.Hidden;
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "Edit Employee";
+            ((System.ComponentModel.ISupportInitialize)ribbon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)middlenameTE.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)firstnameTE.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lastnameTE.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)extensionTE.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)contactTE.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)birthdateDE.Properties.CalendarTimeProperties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)birthdateDE.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)civilstatusCBE.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)genderRG.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)positionRG.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)usernameTE.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)employeeRG.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)accountTS.Properties).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -663,7 +650,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.RadioGroup genderRG;
-        private DevExpress.XtraEditors.SimpleButton addemployeeBTN;
+        private DevExpress.XtraEditors.SimpleButton deleteBTN;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.RadioGroup positionRG;
         public DevExpress.XtraEditors.TextEdit usernameTE;
@@ -673,6 +660,6 @@
         private DevExpress.XtraEditors.ToggleSwitch accountTS;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.HyperlinkLabelControl changepasswordHLBL;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton saveBTN;
     }
 }

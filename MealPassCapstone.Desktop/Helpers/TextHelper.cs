@@ -43,7 +43,7 @@ namespace MealPassCapstone.Desktop.Helpers
             {
                 if (textEdit.Text != defaultText)
                 {
-                    textEdit.ForeColor = Color.Black;
+                    textEdit.ForeColor = Color.DarkGray;
                     if (isPassword)
                         textEdit.Properties.UseSystemPasswordChar = true;
                 }
