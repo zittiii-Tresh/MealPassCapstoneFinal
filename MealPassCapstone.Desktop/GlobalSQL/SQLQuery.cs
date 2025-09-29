@@ -8,15 +8,15 @@ namespace MealPassCapstone.Desktop.GlobalSQL
 {
     public class SQLQuery
     {
-        public static string connectionString = @"Data Source = LAPTOP-FC9GSM04\SQLEXPRESS;Initial Catalog = MealPassDB;Integrated Security = True;";
-        //public static string connectionString = @"Data Source = PAGALING\SQLEXPRESS;Initial Catalog = CinemaDB;Integrated Security = True;";
+        //public static string connectionString = @"Data Source = LAPTOP-FC9GSM04\SQLEXPRESS;Initial Catalog = MealPassDB;Integrated Security = True;";
+        public static string connectionString = @"Data Source = PAGALING\SQLEXPRESS;Initial Catalog = MealPassDB;Integrated Security = True;";
 
         public static string InsertAccount = @"
             INSERT INTO dbo.Employees (
                    FirstName
                   ,MiddleName
                   ,LastName
-                  ,NameExtension
+                  ,NameExtensionS
                   ,Gender
                   ,Birthdate
                   ,ContactNo

@@ -10,10 +10,12 @@
     <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
     <PackageReference Include="Dapper" Version="2.1.66" />
     <PackageReference Include="DevExpress.Win.Design" Version="23.2.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MealPass.Core\MealPass.Core.csproj" />
+    <ProjectReference Include="..\MealPass.Data\MealPass.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
