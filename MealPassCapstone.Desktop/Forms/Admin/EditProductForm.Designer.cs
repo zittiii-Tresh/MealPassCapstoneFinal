@@ -43,13 +43,13 @@
             quantityTE = new DevExpress.XtraEditors.TextEdit();
             labelControl4 = new DevExpress.XtraEditors.LabelControl();
             labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            lowstocklevelTE = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)priceTE.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)categoryCBE.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)productnameTE.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)quantityTE.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lowstocklevelTE.Properties).BeginInit();
             SuspendLayout();
             // 
             // ribbon
@@ -149,7 +149,7 @@
             categoryCBE.Properties.Appearance.Options.UseForeColor = true;
             categoryCBE.Properties.AutoHeight = false;
             categoryCBE.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            categoryCBE.Properties.Items.AddRange(new object[] { "Meals", "Snacks", "Drinks" });
+            categoryCBE.Properties.Items.AddRange(new object[] { "Snacks", "Drinks", "Meals" });
             categoryCBE.Size = new System.Drawing.Size(362, 40);
             categoryCBE.TabIndex = 30;
             // 
@@ -177,7 +177,7 @@
             updateBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             updateBTN.Appearance.Options.UseBackColor = true;
             updateBTN.Appearance.Options.UseFont = true;
-            updateBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton1.ImageOptions.Image");
+            updateBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("updateBTN.ImageOptions.Image");
             updateBTN.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
             updateBTN.Location = new System.Drawing.Point(69, 484);
             updateBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -186,6 +186,7 @@
             updateBTN.Size = new System.Drawing.Size(180, 54);
             updateBTN.TabIndex = 94;
             updateBTN.Text = "Save Changes";
+            updateBTN.Click += updateBTN_Click;
             // 
             // deleteBTN
             // 
@@ -193,7 +194,7 @@
             deleteBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             deleteBTN.Appearance.Options.UseBackColor = true;
             deleteBTN.Appearance.Options.UseFont = true;
-            deleteBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("addemployeeBTN.ImageOptions.Image");
+            deleteBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("deleteBTN.ImageOptions.Image");
             deleteBTN.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
             deleteBTN.Location = new System.Drawing.Point(265, 484);
             deleteBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -202,6 +203,7 @@
             deleteBTN.Size = new System.Drawing.Size(180, 54);
             deleteBTN.TabIndex = 93;
             deleteBTN.Text = "Delete Product";
+            deleteBTN.Click += deleteBTN_Click;
             // 
             // quantityTE
             // 
@@ -249,25 +251,25 @@
             labelControl5.TabIndex = 98;
             labelControl5.Text = "Low Stock Level";
             // 
-            // textEdit1
+            // lowstocklevelTE
             // 
-            textEdit1.Location = new System.Drawing.Point(75, 381);
-            textEdit1.Margin = new System.Windows.Forms.Padding(4);
-            textEdit1.MenuManager = ribbon;
-            textEdit1.Name = "textEdit1";
-            textEdit1.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
-            textEdit1.Properties.Appearance.BorderColor = System.Drawing.Color.White;
-            textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 8.25F);
-            textEdit1.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(224, 224, 224);
-            textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            textEdit1.Properties.Appearance.Options.UseBorderColor = true;
-            textEdit1.Properties.Appearance.Options.UseFont = true;
-            textEdit1.Properties.Appearance.Options.UseForeColor = true;
-            textEdit1.Properties.AutoHeight = false;
-            textEdit1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            textEdit1.Properties.MaskSettings.Set("mask", "d");
-            textEdit1.Size = new System.Drawing.Size(362, 40);
-            textEdit1.TabIndex = 97;
+            lowstocklevelTE.Location = new System.Drawing.Point(75, 381);
+            lowstocklevelTE.Margin = new System.Windows.Forms.Padding(4);
+            lowstocklevelTE.MenuManager = ribbon;
+            lowstocklevelTE.Name = "lowstocklevelTE";
+            lowstocklevelTE.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(93, 93, 93);
+            lowstocklevelTE.Properties.Appearance.BorderColor = System.Drawing.Color.White;
+            lowstocklevelTE.Properties.Appearance.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            lowstocklevelTE.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(224, 224, 224);
+            lowstocklevelTE.Properties.Appearance.Options.UseBackColor = true;
+            lowstocklevelTE.Properties.Appearance.Options.UseBorderColor = true;
+            lowstocklevelTE.Properties.Appearance.Options.UseFont = true;
+            lowstocklevelTE.Properties.Appearance.Options.UseForeColor = true;
+            lowstocklevelTE.Properties.AutoHeight = false;
+            lowstocklevelTE.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            lowstocklevelTE.Properties.MaskSettings.Set("mask", "d");
+            lowstocklevelTE.Size = new System.Drawing.Size(362, 40);
+            lowstocklevelTE.TabIndex = 97;
             // 
             // EditProductForm
             // 
@@ -275,7 +277,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(516, 562);
             Controls.Add(labelControl5);
-            Controls.Add(textEdit1);
+            Controls.Add(lowstocklevelTE);
             Controls.Add(labelControl4);
             Controls.Add(quantityTE);
             Controls.Add(updateBTN);
@@ -302,7 +304,7 @@
             ((System.ComponentModel.ISupportInitialize)categoryCBE.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)productnameTE.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)quantityTE.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lowstocklevelTE.Properties).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -323,6 +325,6 @@
         private DevExpress.XtraEditors.TextEdit quantityTE;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit lowstocklevelTE;
     }
 }

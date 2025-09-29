@@ -54,10 +54,10 @@
             gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             Price = new DevExpress.XtraGrid.Columns.GridColumn();
-            repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
-            repositoryItemButtonDelete2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             Stocks = new DevExpress.XtraGrid.Columns.GridColumn();
             StockStatus = new DevExpress.XtraGrid.Columns.GridColumn();
+            repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
+            repositoryItemButtonDelete2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)findTE.Properties).BeginInit();
             sidePanel9.SuspendLayout();
             sidePanel5.SuspendLayout();
@@ -136,6 +136,7 @@
             findTE.Properties.AutoHeight = false;
             findTE.Size = new System.Drawing.Size(206, 23);
             findTE.TabIndex = 29;
+            findTE.EditValueChanging += findTE_EditValueChanging;
             // 
             // sidePanel9
             // 
@@ -261,6 +262,7 @@
             gvProducts.OptionsEditForm.PopupEditFormWidth = 686;
             gvProducts.OptionsView.RowAutoHeight = true;
             gvProducts.OptionsView.ShowGroupPanel = false;
+            gvProducts.RowClick += gvProducts_RowClick;
             // 
             // ProductID
             // 
@@ -307,7 +309,7 @@
             Category.AppearanceHeader.Options.UseTextOptions = true;
             Category.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             Category.Caption = "Category";
-            Category.FieldName = "Category";
+            Category.FieldName = "CategoryName";
             Category.Name = "Category";
             Category.Visible = true;
             Category.VisibleIndex = 2;
@@ -369,20 +371,6 @@
             Price.VisibleIndex = 5;
             Price.Width = 219;
             // 
-            // repositoryItemPictureEdit1
-            // 
-            repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
-            repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            // 
-            // repositoryItemButtonDelete2
-            // 
-            repositoryItemButtonDelete2.Appearance.Options.UseTextOptions = true;
-            repositoryItemButtonDelete2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            repositoryItemButtonDelete2.AutoHeight = false;
-            repositoryItemButtonDelete2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph) });
-            repositoryItemButtonDelete2.ContextImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("repositoryItemButtonDelete2.ContextImageOptions.SvgImage");
-            repositoryItemButtonDelete2.Name = "repositoryItemButtonDelete2";
-            // 
             // Stocks
             // 
             Stocks.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
@@ -396,7 +384,7 @@
             Stocks.AppearanceHeader.Options.UseTextOptions = true;
             Stocks.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             Stocks.Caption = "Stocks";
-            Stocks.FieldName = "StockQuantity";
+            Stocks.FieldName = "Quantity";
             Stocks.Name = "Stocks";
             Stocks.Visible = true;
             Stocks.VisibleIndex = 3;
@@ -415,11 +403,25 @@
             StockStatus.AppearanceHeader.Options.UseTextOptions = true;
             StockStatus.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             StockStatus.Caption = "Stock Status";
-            StockStatus.FieldName = "StockStatus";
+            StockStatus.FieldName = "StockStatusName";
             StockStatus.Name = "StockStatus";
             StockStatus.Visible = true;
             StockStatus.VisibleIndex = 4;
             StockStatus.Width = 201;
+            // 
+            // repositoryItemPictureEdit1
+            // 
+            repositoryItemPictureEdit1.Name = "repositoryItemPictureEdit1";
+            repositoryItemPictureEdit1.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            // 
+            // repositoryItemButtonDelete2
+            // 
+            repositoryItemButtonDelete2.Appearance.Options.UseTextOptions = true;
+            repositoryItemButtonDelete2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            repositoryItemButtonDelete2.AutoHeight = false;
+            repositoryItemButtonDelete2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph) });
+            repositoryItemButtonDelete2.ContextImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("repositoryItemButtonDelete2.ContextImageOptions.SvgImage");
+            repositoryItemButtonDelete2.Name = "repositoryItemButtonDelete2";
             // 
             // ProductsUC
             // 
