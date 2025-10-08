@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using MealPassCapstone.Desktop.Helpers;
 
 namespace MealPassCapstone.Desktop.Forms.Staff
 {
@@ -16,6 +17,11 @@ namespace MealPassCapstone.Desktop.Forms.Staff
         public StaffMainForm()
         {
             InitializeComponent();
+        }
+
+        private async void posACE_Click(object sender, EventArgs e)
+        {
+            await FormHelper.LoadUserControlAsync(mainSPanel, () => new Staff.PosUC());
         }
     }
 }

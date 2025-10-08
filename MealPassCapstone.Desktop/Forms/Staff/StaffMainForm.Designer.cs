@@ -29,282 +29,280 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffMainForm));
-            this.posACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.purchasehistoryACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.sidePanel5 = new DevExpress.XtraEditors.SidePanel();
-            this.datetimeLBL = new DevExpress.XtraEditors.LabelControl();
-            this.sidePanel7 = new DevExpress.XtraEditors.SidePanel();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.sidePanel6 = new DevExpress.XtraEditors.SidePanel();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.topuphistoryACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.salesreportACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.sidePanel2 = new DevExpress.XtraEditors.SidePanel();
-            this.sidePanel4 = new DevExpress.XtraEditors.SidePanel();
-            this.productsACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.sidePanel3 = new DevExpress.XtraEditors.SidePanel();
-            this.mainSPanel = new DevExpress.XtraEditors.SidePanel();
-            this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
-            this.sidePanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
-            this.sidePanel1.SuspendLayout();
-            this.SuspendLayout();
+            posACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            purchasehistoryACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            sidePanel5 = new DevExpress.XtraEditors.SidePanel();
+            datetimeLBL = new DevExpress.XtraEditors.LabelControl();
+            sidePanel7 = new DevExpress.XtraEditors.SidePanel();
+            labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            sidePanel6 = new DevExpress.XtraEditors.SidePanel();
+            accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            topuphistoryACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            salesreportACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            sidePanel2 = new DevExpress.XtraEditors.SidePanel();
+            sidePanel4 = new DevExpress.XtraEditors.SidePanel();
+            productsACE = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            sidePanel3 = new DevExpress.XtraEditors.SidePanel();
+            mainSPanel = new DevExpress.XtraEditors.SidePanel();
+            accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            sidePanel1 = new DevExpress.XtraEditors.SidePanel();
+            sidePanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)accordionControl1).BeginInit();
+            sidePanel1.SuspendLayout();
+            SuspendLayout();
             // 
             // posACE
             // 
-            this.posACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.posACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.posACE.Appearance.Default.Options.UseFont = true;
-            this.posACE.Appearance.Default.Options.UseForeColor = true;
-            this.posACE.HeaderIndent = 28;
-            this.posACE.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("posACE.ImageOptions.SvgImage")));
-            this.posACE.ImageOptions.SvgImageSize = new System.Drawing.Size(35, 35);
-            this.posACE.Name = "posACE";
-            this.posACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.posACE.Text = "POS";
+            posACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            posACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            posACE.Appearance.Default.Options.UseFont = true;
+            posACE.Appearance.Default.Options.UseForeColor = true;
+            posACE.HeaderIndent = 28;
+            posACE.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("posACE.ImageOptions.SvgImage");
+            posACE.ImageOptions.SvgImageSize = new System.Drawing.Size(35, 35);
+            posACE.Name = "posACE";
+            posACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            posACE.Text = "POS";
+            posACE.Click += posACE_Click;
             // 
             // purchasehistoryACE
             // 
-            this.purchasehistoryACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.purchasehistoryACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.purchasehistoryACE.Appearance.Default.Options.UseFont = true;
-            this.purchasehistoryACE.Appearance.Default.Options.UseForeColor = true;
-            this.purchasehistoryACE.HeaderIndent = 10;
-            this.purchasehistoryACE.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("purchasehistoryACE.ImageOptions.SvgImage")));
-            this.purchasehistoryACE.Name = "purchasehistoryACE";
-            this.purchasehistoryACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.purchasehistoryACE.Text = "Purchase History";
+            purchasehistoryACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            purchasehistoryACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            purchasehistoryACE.Appearance.Default.Options.UseFont = true;
+            purchasehistoryACE.Appearance.Default.Options.UseForeColor = true;
+            purchasehistoryACE.HeaderIndent = 10;
+            purchasehistoryACE.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("purchasehistoryACE.ImageOptions.SvgImage");
+            purchasehistoryACE.Name = "purchasehistoryACE";
+            purchasehistoryACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            purchasehistoryACE.Text = "Purchase History";
             // 
             // sidePanel5
             // 
-            this.sidePanel5.AllowResize = false;
-            this.sidePanel5.BorderThickness = 0;
-            this.sidePanel5.Controls.Add(this.datetimeLBL);
-            this.sidePanel5.Controls.Add(this.sidePanel7);
-            this.sidePanel5.Controls.Add(this.labelControl1);
-            this.sidePanel5.Controls.Add(this.sidePanel6);
-            this.sidePanel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.sidePanel5.Location = new System.Drawing.Point(904, 7);
-            this.sidePanel5.Name = "sidePanel5";
-            this.sidePanel5.Size = new System.Drawing.Size(512, 63);
-            this.sidePanel5.TabIndex = 3;
-            this.sidePanel5.Text = "sidePanel5";
+            sidePanel5.AllowResize = false;
+            sidePanel5.BorderThickness = 0;
+            sidePanel5.Controls.Add(datetimeLBL);
+            sidePanel5.Controls.Add(sidePanel7);
+            sidePanel5.Controls.Add(labelControl1);
+            sidePanel5.Controls.Add(sidePanel6);
+            sidePanel5.Dock = System.Windows.Forms.DockStyle.Right;
+            sidePanel5.Location = new System.Drawing.Point(904, 7);
+            sidePanel5.Name = "sidePanel5";
+            sidePanel5.Size = new System.Drawing.Size(512, 63);
+            sidePanel5.TabIndex = 3;
+            sidePanel5.Text = "sidePanel5";
             // 
             // datetimeLBL
             // 
-            this.datetimeLBL.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetimeLBL.Appearance.ForeColor = System.Drawing.Color.White;
-            this.datetimeLBL.Appearance.Options.UseFont = true;
-            this.datetimeLBL.Appearance.Options.UseForeColor = true;
-            this.datetimeLBL.Location = new System.Drawing.Point(191, 23);
-            this.datetimeLBL.Name = "datetimeLBL";
-            this.datetimeLBL.Size = new System.Drawing.Size(110, 20);
-            this.datetimeLBL.TabIndex = 2;
-            this.datetimeLBL.Text = "Date    /     Time";
+            datetimeLBL.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            datetimeLBL.Appearance.ForeColor = System.Drawing.Color.White;
+            datetimeLBL.Appearance.Options.UseFont = true;
+            datetimeLBL.Appearance.Options.UseForeColor = true;
+            datetimeLBL.Location = new System.Drawing.Point(191, 23);
+            datetimeLBL.Name = "datetimeLBL";
+            datetimeLBL.Size = new System.Drawing.Size(110, 20);
+            datetimeLBL.TabIndex = 2;
+            datetimeLBL.Text = "Date    /     Time";
             // 
             // sidePanel7
             // 
-            this.sidePanel7.AllowResize = false;
-            this.sidePanel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sidePanel7.BackgroundImage")));
-            this.sidePanel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sidePanel7.Location = new System.Drawing.Point(129, 18);
-            this.sidePanel7.Name = "sidePanel7";
-            this.sidePanel7.Size = new System.Drawing.Size(30, 30);
-            this.sidePanel7.TabIndex = 1;
-            this.sidePanel7.Text = "sidePanel7";
+            sidePanel7.AllowResize = false;
+            sidePanel7.BackgroundImage = (System.Drawing.Image)resources.GetObject("sidePanel7.BackgroundImage");
+            sidePanel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            sidePanel7.Location = new System.Drawing.Point(129, 18);
+            sidePanel7.Name = "sidePanel7";
+            sidePanel7.Size = new System.Drawing.Size(30, 30);
+            sidePanel7.TabIndex = 1;
+            sidePanel7.Text = "sidePanel7";
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(53, 24);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(48, 18);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Admin";
+            labelControl1.Appearance.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            labelControl1.Appearance.ForeColor = System.Drawing.Color.White;
+            labelControl1.Appearance.Options.UseFont = true;
+            labelControl1.Appearance.Options.UseForeColor = true;
+            labelControl1.Location = new System.Drawing.Point(53, 24);
+            labelControl1.Name = "labelControl1";
+            labelControl1.Size = new System.Drawing.Size(48, 18);
+            labelControl1.TabIndex = 1;
+            labelControl1.Text = "Admin";
             // 
             // sidePanel6
             // 
-            this.sidePanel6.AllowResize = false;
-            this.sidePanel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sidePanel6.BackgroundImage")));
-            this.sidePanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sidePanel6.Location = new System.Drawing.Point(8, 17);
-            this.sidePanel6.Name = "sidePanel6";
-            this.sidePanel6.Size = new System.Drawing.Size(30, 30);
-            this.sidePanel6.TabIndex = 0;
-            this.sidePanel6.Text = "sidePanel6";
+            sidePanel6.AllowResize = false;
+            sidePanel6.BackgroundImage = (System.Drawing.Image)resources.GetObject("sidePanel6.BackgroundImage");
+            sidePanel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            sidePanel6.Location = new System.Drawing.Point(8, 17);
+            sidePanel6.Name = "sidePanel6";
+            sidePanel6.Size = new System.Drawing.Size(30, 30);
+            sidePanel6.TabIndex = 0;
+            sidePanel6.Text = "sidePanel6";
             // 
             // accordionControlElement5
             // 
-            this.accordionControlElement5.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accordionControlElement5.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.accordionControlElement5.Appearance.Default.Options.UseFont = true;
-            this.accordionControlElement5.Appearance.Default.Options.UseForeColor = true;
-            this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.purchasehistoryACE,
-            this.topuphistoryACE});
-            this.accordionControlElement5.HeaderIndent = 28;
-            this.accordionControlElement5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accordionControlElement5.ImageOptions.SvgImage")));
-            this.accordionControlElement5.ImageOptions.SvgImageSize = new System.Drawing.Size(35, 35);
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Text = "Transaction History";
+            accordionControlElement5.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            accordionControlElement5.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            accordionControlElement5.Appearance.Default.Options.UseFont = true;
+            accordionControlElement5.Appearance.Default.Options.UseForeColor = true;
+            accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { purchasehistoryACE, topuphistoryACE });
+            accordionControlElement5.HeaderIndent = 28;
+            accordionControlElement5.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("accordionControlElement5.ImageOptions.SvgImage");
+            accordionControlElement5.ImageOptions.SvgImageSize = new System.Drawing.Size(35, 35);
+            accordionControlElement5.Name = "accordionControlElement5";
+            accordionControlElement5.Text = "Transaction History";
             // 
             // topuphistoryACE
             // 
-            this.topuphistoryACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topuphistoryACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.topuphistoryACE.Appearance.Default.Options.UseFont = true;
-            this.topuphistoryACE.Appearance.Default.Options.UseForeColor = true;
-            this.topuphistoryACE.HeaderIndent = 10;
-            this.topuphistoryACE.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("topuphistoryACE.ImageOptions.SvgImage")));
-            this.topuphistoryACE.Name = "topuphistoryACE";
-            this.topuphistoryACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.topuphistoryACE.Text = "Top-Up History";
+            topuphistoryACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            topuphistoryACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            topuphistoryACE.Appearance.Default.Options.UseFont = true;
+            topuphistoryACE.Appearance.Default.Options.UseForeColor = true;
+            topuphistoryACE.HeaderIndent = 10;
+            topuphistoryACE.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("topuphistoryACE.ImageOptions.SvgImage");
+            topuphistoryACE.Name = "topuphistoryACE";
+            topuphistoryACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            topuphistoryACE.Text = "Top-Up History";
             // 
             // salesreportACE
             // 
-            this.salesreportACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesreportACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.salesreportACE.Appearance.Default.Options.UseFont = true;
-            this.salesreportACE.Appearance.Default.Options.UseForeColor = true;
-            this.salesreportACE.HeaderIndent = 28;
-            this.salesreportACE.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("salesreportACE.ImageOptions.SvgImage")));
-            this.salesreportACE.ImageOptions.SvgImageSize = new System.Drawing.Size(35, 35);
-            this.salesreportACE.Name = "salesreportACE";
-            this.salesreportACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.salesreportACE.Text = "Sales Report";
+            salesreportACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            salesreportACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            salesreportACE.Appearance.Default.Options.UseFont = true;
+            salesreportACE.Appearance.Default.Options.UseForeColor = true;
+            salesreportACE.HeaderIndent = 28;
+            salesreportACE.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("salesreportACE.ImageOptions.SvgImage");
+            salesreportACE.ImageOptions.SvgImageSize = new System.Drawing.Size(35, 35);
+            salesreportACE.Name = "salesreportACE";
+            salesreportACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            salesreportACE.Text = "Sales Report";
             // 
             // sidePanel2
             // 
-            this.sidePanel2.AllowResize = false;
-            this.sidePanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sidePanel2.BackgroundImage")));
-            this.sidePanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sidePanel2.BorderThickness = 0;
-            this.sidePanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidePanel2.Location = new System.Drawing.Point(100, 7);
-            this.sidePanel2.Name = "sidePanel2";
-            this.sidePanel2.Size = new System.Drawing.Size(118, 63);
-            this.sidePanel2.TabIndex = 2;
-            this.sidePanel2.Text = "sidePanel2";
+            sidePanel2.AllowResize = false;
+            sidePanel2.BackgroundImage = (System.Drawing.Image)resources.GetObject("sidePanel2.BackgroundImage");
+            sidePanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            sidePanel2.BorderThickness = 0;
+            sidePanel2.Dock = System.Windows.Forms.DockStyle.Left;
+            sidePanel2.Location = new System.Drawing.Point(100, 7);
+            sidePanel2.Name = "sidePanel2";
+            sidePanel2.Size = new System.Drawing.Size(118, 63);
+            sidePanel2.TabIndex = 2;
+            sidePanel2.Text = "sidePanel2";
             // 
             // sidePanel4
             // 
-            this.sidePanel4.AllowResize = false;
-            this.sidePanel4.BorderThickness = 0;
-            this.sidePanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sidePanel4.Location = new System.Drawing.Point(100, 0);
-            this.sidePanel4.Name = "sidePanel4";
-            this.sidePanel4.Size = new System.Drawing.Size(1316, 7);
-            this.sidePanel4.TabIndex = 1;
-            this.sidePanel4.Text = "sidePanel4";
+            sidePanel4.AllowResize = false;
+            sidePanel4.BorderThickness = 0;
+            sidePanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            sidePanel4.Location = new System.Drawing.Point(100, 0);
+            sidePanel4.Name = "sidePanel4";
+            sidePanel4.Size = new System.Drawing.Size(1316, 7);
+            sidePanel4.TabIndex = 1;
+            sidePanel4.Text = "sidePanel4";
             // 
             // productsACE
             // 
-            this.productsACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productsACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.productsACE.Appearance.Default.Options.UseFont = true;
-            this.productsACE.Appearance.Default.Options.UseForeColor = true;
-            this.productsACE.HeaderIndent = 28;
-            this.productsACE.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("productsACE.ImageOptions.SvgImage")));
-            this.productsACE.ImageOptions.SvgImageSize = new System.Drawing.Size(35, 35);
-            this.productsACE.Name = "productsACE";
-            this.productsACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.productsACE.Text = "Products";
+            productsACE.Appearance.Default.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            productsACE.Appearance.Default.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            productsACE.Appearance.Default.Options.UseFont = true;
+            productsACE.Appearance.Default.Options.UseForeColor = true;
+            productsACE.HeaderIndent = 28;
+            productsACE.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("productsACE.ImageOptions.SvgImage");
+            productsACE.ImageOptions.SvgImageSize = new System.Drawing.Size(35, 35);
+            productsACE.Name = "productsACE";
+            productsACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            productsACE.Text = "Top-Up";
             // 
             // sidePanel3
             // 
-            this.sidePanel3.AllowResize = false;
-            this.sidePanel3.BorderThickness = 0;
-            this.sidePanel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidePanel3.Location = new System.Drawing.Point(0, 0);
-            this.sidePanel3.Name = "sidePanel3";
-            this.sidePanel3.Size = new System.Drawing.Size(100, 70);
-            this.sidePanel3.TabIndex = 0;
-            this.sidePanel3.Text = "sidePanel3";
+            sidePanel3.AllowResize = false;
+            sidePanel3.BorderThickness = 0;
+            sidePanel3.Dock = System.Windows.Forms.DockStyle.Left;
+            sidePanel3.Location = new System.Drawing.Point(0, 0);
+            sidePanel3.Name = "sidePanel3";
+            sidePanel3.Size = new System.Drawing.Size(100, 70);
+            sidePanel3.TabIndex = 0;
+            sidePanel3.Text = "sidePanel3";
             // 
             // mainSPanel
             // 
-            this.mainSPanel.AllowResize = false;
-            this.mainSPanel.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.mainSPanel.Appearance.Options.UseBackColor = true;
-            this.mainSPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainSPanel.Location = new System.Drawing.Point(304, 70);
-            this.mainSPanel.Name = "mainSPanel";
-            this.mainSPanel.Size = new System.Drawing.Size(1112, 737);
-            this.mainSPanel.TabIndex = 5;
-            this.mainSPanel.Text = "sidePanel5";
+            mainSPanel.AllowResize = false;
+            mainSPanel.Appearance.BackColor = System.Drawing.Color.FromArgb(243, 243, 243);
+            mainSPanel.Appearance.Options.UseBackColor = true;
+            mainSPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            mainSPanel.Location = new System.Drawing.Point(304, 70);
+            mainSPanel.Name = "mainSPanel";
+            mainSPanel.Size = new System.Drawing.Size(1112, 737);
+            mainSPanel.TabIndex = 5;
+            mainSPanel.Text = "sidePanel5";
             // 
             // accordionControl1
             // 
-            this.accordionControl1.AllowDrop = true;
-            this.accordionControl1.AllowElementDragging = true;
-            this.accordionControl1.AllowItemSelection = true;
-            this.accordionControl1.AnimationType = DevExpress.XtraBars.Navigation.AnimationType.Spline;
-            this.accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.White;
-            this.accordionControl1.Appearance.AccordionControl.BorderColor = System.Drawing.Color.Gray;
-            this.accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
-            this.accordionControl1.Appearance.AccordionControl.Options.UseBorderColor = true;
-            this.accordionControl1.Appearance.Group.Default.BorderColor = System.Drawing.Color.Gray;
-            this.accordionControl1.Appearance.Group.Default.Options.UseBorderColor = true;
-            this.accordionControl1.Appearance.Hint.BorderColor = System.Drawing.Color.Gray;
-            this.accordionControl1.Appearance.Hint.Options.UseBorderColor = true;
-            this.accordionControl1.Appearance.ItemWithContainer.Default.BorderColor = System.Drawing.Color.Gray;
-            this.accordionControl1.Appearance.ItemWithContainer.Default.Options.UseBorderColor = true;
-            this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accordionControl1.ElementPositionOnExpanding = DevExpress.XtraBars.Navigation.ElementPositionOnExpanding.Fixed;
-            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.posACE,
-            this.productsACE,
-            this.salesreportACE,
-            this.accordionControlElement5});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 70);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.accordionControl1.Name = "accordionControl1";
-            this.accordionControl1.OptionsFooter.ActiveGroupDisplayMode = DevExpress.XtraBars.Navigation.ActiveGroupDisplayMode.GroupHeaderAndContent;
-            this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.True;
-            this.accordionControl1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(304, 737);
-            this.accordionControl1.TabIndex = 4;
-            this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
+            accordionControl1.AllowDrop = true;
+            accordionControl1.AllowElementDragging = true;
+            accordionControl1.AllowItemSelection = true;
+            accordionControl1.AnimationType = DevExpress.XtraBars.Navigation.AnimationType.Spline;
+            accordionControl1.Appearance.AccordionControl.BackColor = System.Drawing.Color.White;
+            accordionControl1.Appearance.AccordionControl.BorderColor = System.Drawing.Color.Gray;
+            accordionControl1.Appearance.AccordionControl.Options.UseBackColor = true;
+            accordionControl1.Appearance.AccordionControl.Options.UseBorderColor = true;
+            accordionControl1.Appearance.Group.Default.BorderColor = System.Drawing.Color.Gray;
+            accordionControl1.Appearance.Group.Default.Options.UseBorderColor = true;
+            accordionControl1.Appearance.Hint.BorderColor = System.Drawing.Color.Gray;
+            accordionControl1.Appearance.Hint.Options.UseBorderColor = true;
+            accordionControl1.Appearance.ItemWithContainer.Default.BorderColor = System.Drawing.Color.Gray;
+            accordionControl1.Appearance.ItemWithContainer.Default.Options.UseBorderColor = true;
+            accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            accordionControl1.ElementPositionOnExpanding = DevExpress.XtraBars.Navigation.ElementPositionOnExpanding.Fixed;
+            accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] { posACE, productsACE, salesreportACE, accordionControlElement5 });
+            accordionControl1.Location = new System.Drawing.Point(0, 70);
+            accordionControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            accordionControl1.Name = "accordionControl1";
+            accordionControl1.OptionsFooter.ActiveGroupDisplayMode = DevExpress.XtraBars.Navigation.ActiveGroupDisplayMode.GroupHeaderAndContent;
+            accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.True;
+            accordionControl1.Padding = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
+            accordionControl1.Size = new System.Drawing.Size(304, 737);
+            accordionControl1.TabIndex = 4;
+            accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
             // sidePanel1
             // 
-            this.sidePanel1.AllowResize = false;
-            this.sidePanel1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(61)))), ((int)(((byte)(26)))));
-            this.sidePanel1.Appearance.Options.UseBackColor = true;
-            this.sidePanel1.BorderThickness = 0;
-            this.sidePanel1.Controls.Add(this.sidePanel5);
-            this.sidePanel1.Controls.Add(this.sidePanel2);
-            this.sidePanel1.Controls.Add(this.sidePanel4);
-            this.sidePanel1.Controls.Add(this.sidePanel3);
-            this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sidePanel1.Location = new System.Drawing.Point(0, 0);
-            this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(1416, 70);
-            this.sidePanel1.TabIndex = 3;
-            this.sidePanel1.Text = "sidePanel1";
+            sidePanel1.AllowResize = false;
+            sidePanel1.Appearance.BackColor = System.Drawing.Color.FromArgb(23, 61, 26);
+            sidePanel1.Appearance.Options.UseBackColor = true;
+            sidePanel1.BorderThickness = 0;
+            sidePanel1.Controls.Add(sidePanel5);
+            sidePanel1.Controls.Add(sidePanel2);
+            sidePanel1.Controls.Add(sidePanel4);
+            sidePanel1.Controls.Add(sidePanel3);
+            sidePanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            sidePanel1.Location = new System.Drawing.Point(0, 0);
+            sidePanel1.Name = "sidePanel1";
+            sidePanel1.Size = new System.Drawing.Size(1416, 70);
+            sidePanel1.TabIndex = 3;
+            sidePanel1.Text = "sidePanel1";
             // 
             // StaffMainForm
             // 
-            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
-            this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1416, 807);
-            this.Controls.Add(this.mainSPanel);
-            this.Controls.Add(this.accordionControl1);
-            this.Controls.Add(this.sidePanel1);
-            this.Name = "StaffMainForm";
-            this.Text = "StaffMainForm";
-            this.sidePanel5.ResumeLayout(false);
-            this.sidePanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
-            this.sidePanel1.ResumeLayout(false);
-            this.ResumeLayout(false);
+            Appearance.BackColor = System.Drawing.Color.FromArgb(243, 243, 243);
+            Appearance.Options.UseBackColor = true;
+            AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1416, 807);
+            Controls.Add(mainSPanel);
+            Controls.Add(accordionControl1);
+            Controls.Add(sidePanel1);
+            IconOptions.Image = (System.Drawing.Image)resources.GetObject("StaffMainForm.IconOptions.Image");
+            Name = "StaffMainForm";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "StaffMainForm";
+            WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            sidePanel5.ResumeLayout(false);
+            sidePanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)accordionControl1).EndInit();
+            sidePanel1.ResumeLayout(false);
+            ResumeLayout(false);
 
         }
 
