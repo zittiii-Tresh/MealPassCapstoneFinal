@@ -277,6 +277,9 @@
             ProductID.Caption = "#";
             ProductID.FieldName = "ProductID";
             ProductID.Name = "ProductID";
+            ProductID.OptionsColumn.AllowEdit = false;
+            ProductID.OptionsColumn.AllowFocus = false;
+            ProductID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             ProductID.Visible = true;
             ProductID.VisibleIndex = 0;
             ProductID.Width = 61;
@@ -294,6 +297,9 @@
             ProductName.Caption = "Product Name";
             ProductName.FieldName = "ProductName";
             ProductName.Name = "ProductName";
+            ProductName.OptionsColumn.AllowEdit = false;
+            ProductName.OptionsColumn.AllowFocus = false;
+            ProductName.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             ProductName.Visible = true;
             ProductName.VisibleIndex = 1;
             ProductName.Width = 369;
@@ -311,6 +317,9 @@
             Category.Caption = "Category";
             Category.FieldName = "CategoryName";
             Category.Name = "Category";
+            Category.OptionsColumn.AllowEdit = false;
+            Category.OptionsColumn.AllowFocus = false;
+            Category.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             Category.Visible = true;
             Category.VisibleIndex = 2;
             Category.Width = 262;
@@ -367,6 +376,9 @@
             Price.Caption = "Price";
             Price.FieldName = "Price";
             Price.Name = "Price";
+            Price.OptionsColumn.AllowEdit = false;
+            Price.OptionsColumn.AllowFocus = false;
+            Price.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             Price.Visible = true;
             Price.VisibleIndex = 5;
             Price.Width = 219;
@@ -386,6 +398,9 @@
             Stocks.Caption = "Stocks";
             Stocks.FieldName = "Quantity";
             Stocks.Name = "Stocks";
+            Stocks.OptionsColumn.AllowEdit = false;
+            Stocks.OptionsColumn.AllowFocus = false;
+            Stocks.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             Stocks.Visible = true;
             Stocks.VisibleIndex = 3;
             Stocks.Width = 176;
@@ -405,6 +420,9 @@
             StockStatus.Caption = "Stock Status";
             StockStatus.FieldName = "StockStatusName";
             StockStatus.Name = "StockStatus";
+            StockStatus.OptionsColumn.AllowEdit = false;
+            StockStatus.OptionsColumn.AllowFocus = false;
+            StockStatus.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             StockStatus.Visible = true;
             StockStatus.VisibleIndex = 4;
             StockStatus.Width = 201;
