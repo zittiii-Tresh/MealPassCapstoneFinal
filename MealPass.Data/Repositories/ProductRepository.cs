@@ -125,5 +125,24 @@ namespace MealPass.Data.Repositories
                 return table.Rows.Count > 0 ? table.Rows[0] : null;
             }
         }
+
+        public async Task<DataTable> LoadProductsAsync()
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+
+                string query = ProductQuery.FilterAllProducts;
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    DataTable dataTable = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                    await Task.Run(() => adapter.Fill(dataTable));
+
+                    return dataTable;
+                }
+            }
+        }
     }
 }

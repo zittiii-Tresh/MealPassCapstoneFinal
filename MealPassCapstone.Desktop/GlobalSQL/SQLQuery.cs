@@ -125,5 +125,6 @@ namespace MealPassCapstone.Desktop.GlobalSQL
                 IsLocked = @IsLocked,
                 FailedAttempts = CASE WHEN @IsLocked = 0 THEN 0 ELSE FailedAttempts END
                 WHERE Username = @OriginalUsername";
+
     }
 }

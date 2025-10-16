@@ -58,5 +58,18 @@ namespace MealPass.Data.Queries
             LEFT JOIN pro.Category c ON p.CategoryID = c.CategoryID
             LEFT JOIN pro.StockStatus s ON p.StockStatusID = s.StockStatusID
             WHERE p.ProductID = @ProductID";
+
+        public static string FilterAllProducts = @"
+                                                   SELECT p.ProductID 
+                                                  ,p.ProductName
+                                                  ,c.CategoryName
+                                                  ,ss.StockStatusName
+                                                  ,p.Quantity
+                                                  ,p.Price
+                                              FROM pro.Products p
+                                              LEFT JOIN pro.Category c
+                                              ON c.CategoryID = p.CategoryID
+                                              LEFT JOIN pro.StockStatus ss
+                                              ON ss.StockStatusID = p.StockStatusID;";
     }
 }
