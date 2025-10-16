@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentOptionForm));
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            confirmBTN = new DevExpress.XtraEditors.SimpleButton();
-            simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            mealpassBTN = new DevExpress.XtraEditors.SimpleButton();
+            cashBTN = new DevExpress.XtraEditors.SimpleButton();
             SuspendLayout();
             // 
             // labelControl1
@@ -46,29 +46,31 @@
             labelControl1.TabIndex = 0;
             labelControl1.Text = "How would you like to pay?";
             // 
-            // confirmBTN
+            // mealpassBTN
             // 
-            confirmBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(56, 107, 60);
-            confirmBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            confirmBTN.Appearance.Options.UseBackColor = true;
-            confirmBTN.Appearance.Options.UseFont = true;
-            confirmBTN.Location = new System.Drawing.Point(33, 67);
-            confirmBTN.Name = "confirmBTN";
-            confirmBTN.Size = new System.Drawing.Size(121, 31);
-            confirmBTN.TabIndex = 8;
-            confirmBTN.Text = "MealPass";
+            mealpassBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(56, 107, 60);
+            mealpassBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            mealpassBTN.Appearance.Options.UseBackColor = true;
+            mealpassBTN.Appearance.Options.UseFont = true;
+            mealpassBTN.Location = new System.Drawing.Point(33, 67);
+            mealpassBTN.Name = "mealpassBTN";
+            mealpassBTN.Size = new System.Drawing.Size(121, 31);
+            mealpassBTN.TabIndex = 8;
+            mealpassBTN.Text = "MealPass";
+            mealpassBTN.Click += mealpassBTN_Click;
             // 
-            // simpleButton1
+            // cashBTN
             // 
-            simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(56, 107, 60);
-            simpleButton1.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            simpleButton1.Appearance.Options.UseBackColor = true;
-            simpleButton1.Appearance.Options.UseFont = true;
-            simpleButton1.Location = new System.Drawing.Point(196, 67);
-            simpleButton1.Name = "simpleButton1";
-            simpleButton1.Size = new System.Drawing.Size(121, 31);
-            simpleButton1.TabIndex = 9;
-            simpleButton1.Text = "Cash";
+            cashBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(56, 107, 60);
+            cashBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            cashBTN.Appearance.Options.UseBackColor = true;
+            cashBTN.Appearance.Options.UseFont = true;
+            cashBTN.Location = new System.Drawing.Point(196, 67);
+            cashBTN.Name = "cashBTN";
+            cashBTN.Size = new System.Drawing.Size(121, 31);
+            cashBTN.TabIndex = 9;
+            cashBTN.Text = "Cash";
+            cashBTN.Click += cashBTN_Click;
             // 
             // PaymentOptionForm
             // 
@@ -76,9 +78,9 @@
             Appearance.Options.UseBackColor = true;
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(352, 130);
-            Controls.Add(simpleButton1);
-            Controls.Add(confirmBTN);
+            ClientSize = new System.Drawing.Size(352, 128);
+            Controls.Add(cashBTN);
+            Controls.Add(mealpassBTN);
             Controls.Add(labelControl1);
             FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -95,7 +97,7 @@
         #endregion
 
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.SimpleButton confirmBTN;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton mealpassBTN;
+        private DevExpress.XtraEditors.SimpleButton cashBTN;
     }
 }

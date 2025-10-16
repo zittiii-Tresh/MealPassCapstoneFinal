@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PosUC));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             sidePanel2 = new DevExpress.XtraEditors.SidePanel();
             sidePanel3 = new DevExpress.XtraEditors.SidePanel();
@@ -39,11 +44,14 @@
             No = new DevExpress.XtraGrid.Columns.GridColumn();
             Product = new DevExpress.XtraGrid.Columns.GridColumn();
             Quantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             ProductPrice = new DevExpress.XtraGrid.Columns.GridColumn();
             Total = new DevExpress.XtraGrid.Columns.GridColumn();
+            Cancel = new DevExpress.XtraGrid.Columns.GridColumn();
+            repositoryItemCancelBTN = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             sidePanel7 = new DevExpress.XtraEditors.SidePanel();
-            labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            grandtotalLBL = new DevExpress.XtraEditors.LabelControl();
+            confirmBTN = new DevExpress.XtraEditors.SimpleButton();
             labelControl2 = new DevExpress.XtraEditors.LabelControl();
             sidePanel6 = new DevExpress.XtraEditors.SidePanel();
             sidePanel10 = new DevExpress.XtraEditors.SidePanel();
@@ -69,11 +77,13 @@
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
             simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             sidePanel11 = new DevExpress.XtraEditors.SidePanel();
-            addproductBTN = new DevExpress.XtraEditors.SimpleButton();
+            addtocartBTN = new DevExpress.XtraEditors.SimpleButton();
             sidePanel8 = new DevExpress.XtraEditors.SidePanel();
             sidePanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)cartGC).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cartGV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)repositoryItemSpinEdit1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)repositoryItemCancelBTN).BeginInit();
             sidePanel7.SuspendLayout();
             sidePanel6.SuspendLayout();
             sidePanel10.SuspendLayout();
@@ -132,9 +142,9 @@
             sidePanel5.Controls.Add(cartGC);
             sidePanel5.Controls.Add(sidePanel7);
             sidePanel5.Dock = System.Windows.Forms.DockStyle.Right;
-            sidePanel5.Location = new System.Drawing.Point(1211, 20);
+            sidePanel5.Location = new System.Drawing.Point(1139, 20);
             sidePanel5.Name = "sidePanel5";
-            sidePanel5.Size = new System.Drawing.Size(399, 669);
+            sidePanel5.Size = new System.Drawing.Size(471, 669);
             sidePanel5.TabIndex = 4;
             sidePanel5.Text = "sidePanel5";
             // 
@@ -144,16 +154,18 @@
             cartGC.Location = new System.Drawing.Point(0, 0);
             cartGC.MainView = cartGV;
             cartGC.Name = "cartGC";
-            cartGC.Size = new System.Drawing.Size(399, 542);
+            cartGC.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { repositoryItemSpinEdit1, repositoryItemCancelBTN });
+            cartGC.Size = new System.Drawing.Size(471, 542);
             cartGC.TabIndex = 1;
             cartGC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { cartGV });
             // 
             // cartGV
             // 
-            cartGV.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { No, Product, Quantity, ProductPrice, Total });
+            cartGV.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { No, Product, Quantity, ProductPrice, Total, Cancel });
             cartGV.GridControl = cartGC;
             cartGV.Name = "cartGV";
             cartGV.OptionsView.ShowGroupPanel = false;
+            cartGV.CellValueChanged += cartGV_CellValueChanged;
             // 
             // No
             // 
@@ -170,9 +182,10 @@
             No.Caption = "ID";
             No.FieldName = "ID";
             No.Name = "No";
-            No.Visible = true;
-            No.VisibleIndex = 0;
-            No.Width = 105;
+            No.OptionsColumn.AllowEdit = false;
+            No.OptionsColumn.AllowFocus = false;
+            No.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
+            No.Width = 99;
             // 
             // Product
             // 
@@ -189,8 +202,11 @@
             Product.Caption = "Name";
             Product.FieldName = "ProductName";
             Product.Name = "Product";
+            Product.OptionsColumn.AllowEdit = false;
+            Product.OptionsColumn.AllowFocus = false;
+            Product.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             Product.Visible = true;
-            Product.VisibleIndex = 1;
+            Product.VisibleIndex = 0;
             Product.Width = 452;
             // 
             // Quantity
@@ -205,12 +221,20 @@
             Quantity.AppearanceHeader.Options.UseFont = true;
             Quantity.AppearanceHeader.Options.UseTextOptions = true;
             Quantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            Quantity.Caption = "Quantity";
+            Quantity.Caption = "Qty.";
+            Quantity.ColumnEdit = repositoryItemSpinEdit1;
             Quantity.FieldName = "Quantity";
             Quantity.Name = "Quantity";
             Quantity.Visible = true;
-            Quantity.VisibleIndex = 2;
-            Quantity.Width = 262;
+            Quantity.VisibleIndex = 1;
+            Quantity.Width = 260;
+            // 
+            // repositoryItemSpinEdit1
+            // 
+            repositoryItemSpinEdit1.AutoHeight = false;
+            repositoryItemSpinEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            repositoryItemSpinEdit1.Name = "repositoryItemSpinEdit1";
+            repositoryItemSpinEdit1.SpinStyle = DevExpress.XtraEditors.Controls.SpinStyles.Horizontal;
             // 
             // ProductPrice
             // 
@@ -227,11 +251,14 @@
             ProductPrice.AppearanceHeader.Options.UseTextOptions = true;
             ProductPrice.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             ProductPrice.Caption = "Price";
-            ProductPrice.FieldName = "ProductPrice";
+            ProductPrice.FieldName = "Price";
             ProductPrice.Name = "ProductPrice";
+            ProductPrice.OptionsColumn.AllowEdit = false;
+            ProductPrice.OptionsColumn.AllowFocus = false;
+            ProductPrice.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             ProductPrice.Visible = true;
-            ProductPrice.VisibleIndex = 3;
-            ProductPrice.Width = 262;
+            ProductPrice.VisibleIndex = 2;
+            ProductPrice.Width = 274;
             // 
             // Total
             // 
@@ -250,9 +277,48 @@
             Total.Caption = "Total";
             Total.FieldName = "Total";
             Total.Name = "Total";
+            Total.OptionsColumn.AllowEdit = false;
+            Total.OptionsColumn.AllowFocus = false;
+            Total.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             Total.Visible = true;
-            Total.VisibleIndex = 4;
-            Total.Width = 269;
+            Total.VisibleIndex = 3;
+            Total.Width = 267;
+            // 
+            // Cancel
+            // 
+            Cancel.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            Cancel.AppearanceCell.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            Cancel.AppearanceCell.Options.UseFont = true;
+            Cancel.AppearanceCell.Options.UseForeColor = true;
+            Cancel.AppearanceCell.Options.UseTextOptions = true;
+            Cancel.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            Cancel.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(26, 42, 21);
+            Cancel.AppearanceHeader.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            Cancel.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(255, 128, 128);
+            Cancel.AppearanceHeader.Options.UseBackColor = true;
+            Cancel.AppearanceHeader.Options.UseFont = true;
+            Cancel.AppearanceHeader.Options.UseForeColor = true;
+            Cancel.AppearanceHeader.Options.UseTextOptions = true;
+            Cancel.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            Cancel.Caption = "Cnl.";
+            Cancel.ColumnEdit = repositoryItemCancelBTN;
+            Cancel.FieldName = "Cancel";
+            Cancel.Name = "Cancel";
+            Cancel.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
+            Cancel.OptionsColumn.ReadOnly = true;
+            Cancel.Visible = true;
+            Cancel.VisibleIndex = 4;
+            Cancel.Width = 97;
+            // 
+            // repositoryItemCancelBTN
+            // 
+            repositoryItemCancelBTN.AllowFocused = false;
+            repositoryItemCancelBTN.AutoHeight = false;
+            editorButtonImageOptions2.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("editorButtonImageOptions2.SvgImage");
+            repositoryItemCancelBTN.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
+            repositoryItemCancelBTN.Name = "repositoryItemCancelBTN";
+            repositoryItemCancelBTN.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            repositoryItemCancelBTN.ButtonClick += repositoryItemCancelBTN_ButtonClick;
             // 
             // sidePanel7
             // 
@@ -260,39 +326,40 @@
             sidePanel7.Appearance.BorderColor = System.Drawing.Color.Gray;
             sidePanel7.Appearance.Options.UseBackColor = true;
             sidePanel7.Appearance.Options.UseBorderColor = true;
-            sidePanel7.Controls.Add(labelControl3);
-            sidePanel7.Controls.Add(simpleButton5);
+            sidePanel7.Controls.Add(grandtotalLBL);
+            sidePanel7.Controls.Add(confirmBTN);
             sidePanel7.Controls.Add(labelControl2);
             sidePanel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             sidePanel7.Location = new System.Drawing.Point(0, 542);
             sidePanel7.Name = "sidePanel7";
-            sidePanel7.Size = new System.Drawing.Size(399, 127);
+            sidePanel7.Size = new System.Drawing.Size(471, 127);
             sidePanel7.TabIndex = 0;
             sidePanel7.Text = "sidePanel7";
             // 
-            // labelControl3
+            // grandtotalLBL
             // 
-            labelControl3.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            labelControl3.Appearance.Options.UseFont = true;
-            labelControl3.Appearance.Options.UseForeColor = true;
-            labelControl3.Location = new System.Drawing.Point(245, 36);
-            labelControl3.Name = "labelControl3";
-            labelControl3.Size = new System.Drawing.Size(49, 23);
-            labelControl3.TabIndex = 7;
-            labelControl3.Text = "00.00";
+            grandtotalLBL.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            grandtotalLBL.Appearance.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            grandtotalLBL.Appearance.Options.UseFont = true;
+            grandtotalLBL.Appearance.Options.UseForeColor = true;
+            grandtotalLBL.Location = new System.Drawing.Point(345, 36);
+            grandtotalLBL.Name = "grandtotalLBL";
+            grandtotalLBL.Size = new System.Drawing.Size(49, 23);
+            grandtotalLBL.TabIndex = 7;
+            grandtotalLBL.Text = "00.00";
             // 
-            // simpleButton5
+            // confirmBTN
             // 
-            simpleButton5.Appearance.BackColor = System.Drawing.Color.FromArgb(56, 107, 60);
-            simpleButton5.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            simpleButton5.Appearance.Options.UseBackColor = true;
-            simpleButton5.Appearance.Options.UseFont = true;
-            simpleButton5.Location = new System.Drawing.Point(276, 91);
-            simpleButton5.Name = "simpleButton5";
-            simpleButton5.Size = new System.Drawing.Size(120, 31);
-            simpleButton5.TabIndex = 6;
-            simpleButton5.Text = "Confirm";
+            confirmBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(56, 107, 60);
+            confirmBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            confirmBTN.Appearance.Options.UseBackColor = true;
+            confirmBTN.Appearance.Options.UseFont = true;
+            confirmBTN.Location = new System.Drawing.Point(345, 91);
+            confirmBTN.Name = "confirmBTN";
+            confirmBTN.Size = new System.Drawing.Size(120, 31);
+            confirmBTN.TabIndex = 6;
+            confirmBTN.Text = "Confirm";
+            confirmBTN.Click += confirmBTN_Click;
             // 
             // labelControl2
             // 
@@ -300,7 +367,7 @@
             labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(27, 125, 79);
             labelControl2.Appearance.Options.UseFont = true;
             labelControl2.Appearance.Options.UseForeColor = true;
-            labelControl2.Location = new System.Drawing.Point(79, 32);
+            labelControl2.Location = new System.Drawing.Point(147, 32);
             labelControl2.Name = "labelControl2";
             labelControl2.Size = new System.Drawing.Size(142, 28);
             labelControl2.TabIndex = 1;
@@ -315,7 +382,7 @@
             sidePanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             sidePanel6.Location = new System.Drawing.Point(39, 20);
             sidePanel6.Name = "sidePanel6";
-            sidePanel6.Size = new System.Drawing.Size(1172, 669);
+            sidePanel6.Size = new System.Drawing.Size(1100, 669);
             sidePanel6.TabIndex = 5;
             sidePanel6.Text = "sidePanel6";
             // 
@@ -326,7 +393,7 @@
             sidePanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             sidePanel10.Location = new System.Drawing.Point(0, 199);
             sidePanel10.Name = "sidePanel10";
-            sidePanel10.Size = new System.Drawing.Size(1144, 470);
+            sidePanel10.Size = new System.Drawing.Size(1072, 470);
             sidePanel10.TabIndex = 3;
             sidePanel10.Text = "sidePanel10";
             // 
@@ -336,15 +403,19 @@
             productsGC.Location = new System.Drawing.Point(0, 0);
             productsGC.MainView = productsGV;
             productsGC.Name = "productsGC";
-            productsGC.Size = new System.Drawing.Size(1144, 470);
+            productsGC.Size = new System.Drawing.Size(1072, 470);
             productsGC.TabIndex = 0;
+            productsGC.UseEmbeddedNavigator = true;
             productsGC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { productsGV });
             // 
             // productsGV
             // 
+            productsGV.Appearance.Row.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            productsGV.Appearance.Row.Options.UseForeColor = true;
             productsGV.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { ID, ProductName, Category, Price, Stocks, StockStatus });
             productsGV.GridControl = productsGC;
             productsGV.Name = "productsGV";
+            productsGV.OptionsView.EnableAppearanceEvenRow = true;
             productsGV.OptionsView.ShowGroupPanel = false;
             // 
             // ID
@@ -362,6 +433,9 @@
             ID.Caption = "ID";
             ID.FieldName = "ProductID";
             ID.Name = "ID";
+            ID.OptionsColumn.AllowEdit = false;
+            ID.OptionsColumn.AllowFocus = false;
+            ID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             ID.Visible = true;
             ID.VisibleIndex = 0;
             ID.Width = 40;
@@ -381,6 +455,9 @@
             ProductName.Caption = "Product Name";
             ProductName.FieldName = "ProductName";
             ProductName.Name = "ProductName";
+            ProductName.OptionsColumn.AllowEdit = false;
+            ProductName.OptionsColumn.AllowFocus = false;
+            ProductName.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             ProductName.Visible = true;
             ProductName.VisibleIndex = 1;
             ProductName.Width = 369;
@@ -398,8 +475,11 @@
             Category.AppearanceHeader.Options.UseTextOptions = true;
             Category.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             Category.Caption = "Category";
-            Category.FieldName = "Category";
+            Category.FieldName = "CategoryName";
             Category.Name = "Category";
+            Category.OptionsColumn.AllowEdit = false;
+            Category.OptionsColumn.AllowFocus = false;
+            Category.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             Category.Visible = true;
             Category.VisibleIndex = 2;
             Category.Width = 232;
@@ -421,6 +501,9 @@
             Price.Caption = "Price";
             Price.FieldName = "Price";
             Price.Name = "Price";
+            Price.OptionsColumn.AllowEdit = false;
+            Price.OptionsColumn.AllowFocus = false;
+            Price.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             Price.Visible = true;
             Price.VisibleIndex = 5;
             Price.Width = 189;
@@ -431,6 +514,8 @@
             Stocks.AppearanceCell.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
             Stocks.AppearanceCell.Options.UseFont = true;
             Stocks.AppearanceCell.Options.UseForeColor = true;
+            Stocks.AppearanceCell.Options.UseTextOptions = true;
+            Stocks.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             Stocks.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(26, 42, 21);
             Stocks.AppearanceHeader.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             Stocks.AppearanceHeader.Options.UseBackColor = true;
@@ -438,8 +523,11 @@
             Stocks.AppearanceHeader.Options.UseTextOptions = true;
             Stocks.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             Stocks.Caption = "Stocks";
-            Stocks.FieldName = "StockQuantity";
+            Stocks.FieldName = "Quantity";
             Stocks.Name = "Stocks";
+            Stocks.OptionsColumn.AllowEdit = false;
+            Stocks.OptionsColumn.AllowFocus = false;
+            Stocks.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             Stocks.Visible = true;
             Stocks.VisibleIndex = 3;
             Stocks.Width = 185;
@@ -457,8 +545,11 @@
             StockStatus.AppearanceHeader.Options.UseTextOptions = true;
             StockStatus.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             StockStatus.Caption = "Stock Status";
-            StockStatus.FieldName = "StockStatus";
+            StockStatus.FieldName = "StockStatusName";
             StockStatus.Name = "StockStatus";
+            StockStatus.OptionsColumn.AllowEdit = false;
+            StockStatus.OptionsColumn.AllowFocus = false;
+            StockStatus.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             StockStatus.Visible = true;
             StockStatus.VisibleIndex = 4;
             StockStatus.Width = 335;
@@ -472,7 +563,7 @@
             sidePanel9.Dock = System.Windows.Forms.DockStyle.Top;
             sidePanel9.Location = new System.Drawing.Point(0, 0);
             sidePanel9.Name = "sidePanel9";
-            sidePanel9.Size = new System.Drawing.Size(1144, 199);
+            sidePanel9.Size = new System.Drawing.Size(1072, 199);
             sidePanel9.TabIndex = 2;
             sidePanel9.Text = "sidePanel9";
             // 
@@ -488,7 +579,7 @@
             sidePanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             sidePanel13.Location = new System.Drawing.Point(243, 0);
             sidePanel13.Name = "sidePanel13";
-            sidePanel13.Size = new System.Drawing.Size(786, 199);
+            sidePanel13.Size = new System.Drawing.Size(714, 199);
             sidePanel13.TabIndex = 2;
             sidePanel13.Text = "sidePanel13";
             // 
@@ -639,35 +730,36 @@
             // sidePanel11
             // 
             sidePanel11.BorderThickness = 0;
-            sidePanel11.Controls.Add(addproductBTN);
+            sidePanel11.Controls.Add(addtocartBTN);
             sidePanel11.Dock = System.Windows.Forms.DockStyle.Right;
-            sidePanel11.Location = new System.Drawing.Point(1029, 0);
+            sidePanel11.Location = new System.Drawing.Point(957, 0);
             sidePanel11.Name = "sidePanel11";
             sidePanel11.Size = new System.Drawing.Size(115, 199);
             sidePanel11.TabIndex = 0;
             sidePanel11.Text = "sidePanel11";
             // 
-            // addproductBTN
+            // addtocartBTN
             // 
-            addproductBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(56, 107, 60);
-            addproductBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            addproductBTN.Appearance.Options.UseBackColor = true;
-            addproductBTN.Appearance.Options.UseFont = true;
-            addproductBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("addproductBTN.ImageOptions.Image");
-            addproductBTN.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
-            addproductBTN.Location = new System.Drawing.Point(7, 159);
-            addproductBTN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            addproductBTN.Name = "addproductBTN";
-            addproductBTN.Padding = new System.Windows.Forms.Padding(2);
-            addproductBTN.Size = new System.Drawing.Size(101, 32);
-            addproductBTN.TabIndex = 26;
-            addproductBTN.Text = "Add";
+            addtocartBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(56, 107, 60);
+            addtocartBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            addtocartBTN.Appearance.Options.UseBackColor = true;
+            addtocartBTN.Appearance.Options.UseFont = true;
+            addtocartBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("addtocartBTN.ImageOptions.Image");
+            addtocartBTN.ImageOptions.SvgImageSize = new System.Drawing.Size(20, 20);
+            addtocartBTN.Location = new System.Drawing.Point(7, 159);
+            addtocartBTN.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            addtocartBTN.Name = "addtocartBTN";
+            addtocartBTN.Padding = new System.Windows.Forms.Padding(2);
+            addtocartBTN.Size = new System.Drawing.Size(101, 32);
+            addtocartBTN.TabIndex = 26;
+            addtocartBTN.Text = "Add";
+            addtocartBTN.Click += addtocartBTN_Click;
             // 
             // sidePanel8
             // 
             sidePanel8.BorderThickness = 0;
             sidePanel8.Dock = System.Windows.Forms.DockStyle.Right;
-            sidePanel8.Location = new System.Drawing.Point(1144, 0);
+            sidePanel8.Location = new System.Drawing.Point(1072, 0);
             sidePanel8.Name = "sidePanel8";
             sidePanel8.Size = new System.Drawing.Size(28, 669);
             sidePanel8.TabIndex = 1;
@@ -687,9 +779,12 @@
             Controls.Add(sidePanel1);
             Name = "PosUC";
             Size = new System.Drawing.Size(1645, 722);
+            Load += PosUC_LoadAsync;
             sidePanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)cartGC).EndInit();
             ((System.ComponentModel.ISupportInitialize)cartGV).EndInit();
+            ((System.ComponentModel.ISupportInitialize)repositoryItemSpinEdit1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)repositoryItemCancelBTN).EndInit();
             sidePanel7.ResumeLayout(false);
             sidePanel7.PerformLayout();
             sidePanel6.ResumeLayout(false);
@@ -724,7 +819,7 @@
         private DevExpress.XtraGrid.GridControl productsGC;
         private DevExpress.XtraGrid.Views.Grid.GridView productsGV;
         private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraEditors.SimpleButton confirmBTN;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SidePanel sidePanel11;
         private DevExpress.XtraEditors.SidePanel sidePanel12;
@@ -733,8 +828,8 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton addproductBTN;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SimpleButton addtocartBTN;
+        private DevExpress.XtraEditors.LabelControl grandtotalLBL;
         private DevExpress.XtraGrid.Columns.GridColumn ID;
         private DevExpress.XtraGrid.Columns.GridColumn ProductName;
         private DevExpress.XtraGrid.Columns.GridColumn Category;
@@ -750,5 +845,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit repositoryItemSpinEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn Cancel;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemCancelBTN;
     }
 }

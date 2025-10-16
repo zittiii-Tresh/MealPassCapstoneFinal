@@ -17,6 +17,7 @@ namespace MealPassCapstone.Desktop.Forms.Staff
         public StaffMainForm()
         {
             InitializeComponent();
+            datetimeLBL.Text = DateTime.Now.ToString("F");
         }
 
         private async void posACE_Click(object sender, EventArgs e)

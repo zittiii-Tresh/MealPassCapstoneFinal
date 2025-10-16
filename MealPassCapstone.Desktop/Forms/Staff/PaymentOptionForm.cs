@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using MealPassCapstone.Desktop.Helpers;
 
 namespace MealPassCapstone.Desktop.Forms.Staff
 {
@@ -16,6 +17,16 @@ namespace MealPassCapstone.Desktop.Forms.Staff
         public PaymentOptionForm()
         {
             InitializeComponent();
+        }
+
+        private void mealpassBTN_Click(object sender, EventArgs e)
+        {
+            FormHelper.DisplayForm(new Staff.ScanRFIDForm());
+        }
+
+        private void cashBTN_Click(object sender, EventArgs e)
+        {
+            FormHelper.DisplayForm(new Staff.CashOptionForm());
         }
     }
 }
