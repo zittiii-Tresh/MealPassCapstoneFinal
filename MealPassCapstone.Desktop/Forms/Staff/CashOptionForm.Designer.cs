@@ -121,6 +121,9 @@
             cashpaymentTE.Properties.Appearance.Options.UseTextOptions = true;
             cashpaymentTE.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             cashpaymentTE.Properties.AutoHeight = false;
+            cashpaymentTE.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            cashpaymentTE.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            cashpaymentTE.Properties.MaskSettings.Set("mask", "c");
             cashpaymentTE.Size = new System.Drawing.Size(289, 28);
             cashpaymentTE.TabIndex = 0;
             // 

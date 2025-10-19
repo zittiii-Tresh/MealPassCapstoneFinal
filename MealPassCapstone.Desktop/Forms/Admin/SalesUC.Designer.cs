@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesUC));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             repositoryItemButtonDelete2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             ItemsSold = new DevExpress.XtraGrid.Columns.GridColumn();
             Price = new DevExpress.XtraGrid.Columns.GridColumn();
             CategoryName = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,6 +58,7 @@
             sidePanel4 = new DevExpress.XtraEditors.SidePanel();
             sidePanel3 = new DevExpress.XtraEditors.SidePanel();
             sidePanel2 = new DevExpress.XtraEditors.SidePanel();
+            TotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)repositoryItemButtonDelete2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemButtonEdit1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemPictureEdit1).BeginInit();
@@ -84,40 +84,16 @@
             // repositoryItemButtonEdit1
             // 
             repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions1.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("editorButtonImageOptions1.SvgImage");
-            repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
+            editorButtonImageOptions2.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("editorButtonImageOptions2.SvgImage");
+            repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
             repositoryItemButtonEdit1.ContextImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("repositoryItemButtonEdit1.ContextImageOptions.SvgImage");
             repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // gridColumn4
-            // 
-            gridColumn4.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
-            gridColumn4.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            gridColumn4.AppearanceCell.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
-            gridColumn4.AppearanceCell.Options.UseBackColor = true;
-            gridColumn4.AppearanceCell.Options.UseFont = true;
-            gridColumn4.AppearanceCell.Options.UseForeColor = true;
-            gridColumn4.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(26, 42, 21);
-            gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            gridColumn4.AppearanceHeader.ForeColor = System.Drawing.Color.White;
-            gridColumn4.AppearanceHeader.Options.UseBackColor = true;
-            gridColumn4.AppearanceHeader.Options.UseFont = true;
-            gridColumn4.AppearanceHeader.Options.UseForeColor = true;
-            gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
-            gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            gridColumn4.Caption = "Edit";
-            gridColumn4.ColumnEdit = repositoryItemButtonEdit1;
-            gridColumn4.MinWidth = 21;
-            gridColumn4.Name = "gridColumn4";
-            gridColumn4.OptionsColumn.ReadOnly = true;
-            gridColumn4.Visible = true;
-            gridColumn4.VisibleIndex = 5;
-            // 
             // ItemsSold
             // 
             ItemsSold.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
-            ItemsSold.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            ItemsSold.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             ItemsSold.AppearanceCell.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ItemsSold.AppearanceCell.Options.UseBackColor = true;
             ItemsSold.AppearanceCell.Options.UseFont = true;
@@ -141,12 +117,12 @@
             ItemsSold.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             ItemsSold.Visible = true;
             ItemsSold.VisibleIndex = 4;
-            ItemsSold.Width = 288;
+            ItemsSold.Width = 314;
             // 
             // Price
             // 
             Price.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
-            Price.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            Price.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             Price.AppearanceCell.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
             Price.AppearanceCell.Options.UseBackColor = true;
             Price.AppearanceCell.Options.UseFont = true;
@@ -170,12 +146,12 @@
             Price.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             Price.Visible = true;
             Price.VisibleIndex = 3;
-            Price.Width = 294;
+            Price.Width = 199;
             // 
             // CategoryName
             // 
             CategoryName.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
-            CategoryName.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            CategoryName.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             CategoryName.AppearanceCell.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
             CategoryName.AppearanceCell.Options.UseBackColor = true;
             CategoryName.AppearanceCell.Options.UseFont = true;
@@ -199,12 +175,12 @@
             CategoryName.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             CategoryName.Visible = true;
             CategoryName.VisibleIndex = 2;
-            CategoryName.Width = 223;
+            CategoryName.Width = 215;
             // 
             // ProductName
             // 
             ProductName.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
-            ProductName.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            ProductName.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             ProductName.AppearanceCell.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
             ProductName.AppearanceCell.Options.UseBackColor = true;
             ProductName.AppearanceCell.Options.UseFont = true;
@@ -226,12 +202,12 @@
             ProductName.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             ProductName.Visible = true;
             ProductName.VisibleIndex = 1;
-            ProductName.Width = 412;
+            ProductName.Width = 475;
             // 
             // SaleID
             // 
             SaleID.AppearanceCell.BackColor = System.Drawing.Color.WhiteSmoke;
-            SaleID.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            SaleID.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             SaleID.AppearanceCell.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
             SaleID.AppearanceCell.Options.UseBackColor = true;
             SaleID.AppearanceCell.Options.UseFont = true;
@@ -253,7 +229,7 @@
             SaleID.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
             SaleID.Visible = true;
             SaleID.VisibleIndex = 0;
-            SaleID.Width = 58;
+            SaleID.Width = 66;
             // 
             // repositoryItemPictureEdit1
             // 
@@ -262,7 +238,7 @@
             // 
             // gvSales
             // 
-            gvSales.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { SaleID, ProductName, CategoryName, Price, ItemsSold, gridColumn4 });
+            gvSales.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { SaleID, ProductName, CategoryName, Price, ItemsSold, TotalAmount });
             gvSales.DetailHeight = 284;
             gvSales.GridControl = gcSales;
             gvSales.Name = "gvSales";
@@ -497,6 +473,29 @@
             sidePanel2.TabIndex = 33;
             sidePanel2.Text = "sidePanel2";
             // 
+            // TotalAmount
+            // 
+            TotalAmount.AppearanceCell.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            TotalAmount.AppearanceCell.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            TotalAmount.AppearanceCell.Options.UseFont = true;
+            TotalAmount.AppearanceCell.Options.UseForeColor = true;
+            TotalAmount.AppearanceCell.Options.UseTextOptions = true;
+            TotalAmount.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            TotalAmount.AppearanceHeader.BackColor = System.Drawing.Color.FromArgb(26, 42, 21);
+            TotalAmount.AppearanceHeader.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            TotalAmount.AppearanceHeader.ForeColor = System.Drawing.Color.White;
+            TotalAmount.AppearanceHeader.Options.UseBackColor = true;
+            TotalAmount.AppearanceHeader.Options.UseFont = true;
+            TotalAmount.AppearanceHeader.Options.UseForeColor = true;
+            TotalAmount.AppearanceHeader.Options.UseTextOptions = true;
+            TotalAmount.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            TotalAmount.Caption = "Total Amount";
+            TotalAmount.FieldName = "TotalAmount";
+            TotalAmount.Name = "TotalAmount";
+            TotalAmount.Visible = true;
+            TotalAmount.VisibleIndex = 5;
+            TotalAmount.Width = 290;
+            // 
             // SalesUC
             // 
             Appearance.BackColor = System.Drawing.Color.FromArgb(230, 230, 230);
@@ -531,7 +530,6 @@
 
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonDelete2;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        internal DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn ItemsSold;
         private DevExpress.XtraGrid.Columns.GridColumn Price;
         private DevExpress.XtraGrid.Columns.GridColumn CategoryName;
@@ -554,5 +552,6 @@
         private DevExpress.XtraEditors.SidePanel sidePanel2;
         private DevExpress.XtraEditors.DateEdit dateDE;
         private DevExpress.XtraEditors.SidePanel sidePanel10;
+        private DevExpress.XtraGrid.Columns.GridColumn TotalAmount;
     }
 }

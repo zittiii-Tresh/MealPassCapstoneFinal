@@ -144,5 +144,62 @@ namespace MealPass.Data.Repositories
                 }
             }
         }
+
+        public async Task<DataTable> LoadSnacksAsync()
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+
+                string query = ProductQuery.FilterSnacks;
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    DataTable dataTable = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                    await Task.Run(() => adapter.Fill(dataTable));
+
+                    return dataTable;
+                }
+            }
+        }
+
+        public async Task<DataTable> LoadMealsAsync()
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+
+                string query = ProductQuery.FilterMeals;
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    DataTable dataTable = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                    await Task.Run(() => adapter.Fill(dataTable));
+
+                    return dataTable;
+                }
+            }
+        }
+
+        public async Task<DataTable> LoadDrinksAsync()
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                await conn.OpenAsync();
+
+                string query = ProductQuery.FilterDrinks;
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    DataTable dataTable = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                    await Task.Run(() => adapter.Fill(dataTable));
+
+                    return dataTable;
+                }
+            }
+        }
     }
 }
