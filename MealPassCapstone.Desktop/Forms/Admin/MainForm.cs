@@ -44,5 +44,15 @@ namespace MealPassCapstone.Desktop.Forms.Admin
         {
             await FormHelper.LoadUserControlAsync(mainSPanel, () => new Admin.TopUpHistoryUC());
         }
+
+        private async void purchasehistoryACE_Click(object sender, EventArgs e)
+        {
+            await FormHelper.LoadUserControlAsync(mainSPanel, () => new Admin.PurchaseHistoryUC());
+        }
+
+        private async void posACE_Click(object sender, EventArgs e)
+        {
+            await FormHelper.LoadUserControlAsync(mainSPanel, () => new Staff.PosUC());
+        }
     }
 }

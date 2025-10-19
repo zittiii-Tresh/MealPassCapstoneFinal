@@ -20,16 +20,33 @@ namespace MealPassCapstone.Desktop.Forms.Staff
         public PosUC()
         {
             InitializeComponent();
-            Cancel.ColumnEdit = repositoryItemCancelBTN; // <-- important
+            Cancel.ColumnEdit = repositoryItemCancelBTN;
             this.Load += PosUC_LoadAsync;
         }
         private async void PosUC_LoadAsync(object sender, EventArgs e)
         {
             await LoadProductsAsync();
         }
+        private async Task LoadSnacksAsync()
+        {
+            var dataTable = await _productRepo.LoadSnacksAsync();
+            productsGC.DataSource = dataTable;
+        }
+        private async Task LoadMealsAsync()
+        {
+            var dataTable = await _productRepo.LoadMealsAsync();
+            productsGC.DataSource = dataTable;
+        }
+
         private async Task LoadProductsAsync()
         {
             var dataTable = await _productRepo.LoadProductsAsync();
+            productsGC.DataSource = dataTable;
+        }
+
+        private async Task LoadDrinksAsync()
+        {
+            var dataTable = await _productRepo.LoadDrinksAsync();
             productsGC.DataSource = dataTable;
         }
 
@@ -45,11 +62,19 @@ namespace MealPassCapstone.Desktop.Forms.Staff
             string productID = productsGV.GetRowCellValue(selectedRow, "ProductID")?.ToString();
             string productName = productsGV.GetRowCellValue(selectedRow, "ProductName")?.ToString();
             string priceStr = productsGV.GetRowCellValue(selectedRow, "Price")?.ToString();
+            string stockStr = productsGV.GetRowCellValue(selectedRow, "Quantity")?.ToString();
+            int stock = int.TryParse(stockStr, out int s) ? s : 0;
+
+            if (stock <= 0)
+            {
+                MessageBox.Show($"Sorry, '{productName}' is out of stock.", "Out of Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             decimal price = decimal.TryParse(priceStr, out decimal p) ? p : 0;
             int quantity = 1;
             decimal total = price * quantity;
 
-            // ✅ Ensure your cart table schema matches your grid field names
             DataTable cartTable = cartGC.DataSource as DataTable;
             if (cartTable == null)
             {
@@ -62,7 +87,13 @@ namespace MealPassCapstone.Desktop.Forms.Staff
                 cartGC.DataSource = cartTable;
             }
 
-            // ✅ Add new item
+            bool alreadyInCart = cartTable.AsEnumerable().Any(r => r["ID"].ToString() == productID);
+            if (alreadyInCart)
+            {
+                MessageBox.Show($"'{productName}' is already in your cart.", "Duplicate Item", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             DataRow newRow = cartTable.NewRow();
             newRow["ID"] = productID;
             newRow["ProductName"] = productName;
@@ -123,7 +154,7 @@ namespace MealPassCapstone.Desktop.Forms.Staff
 
             if (cartGC.DataSource is DataTable cartTable)
             {
-              
+
                 var rowsToRemove = cartTable.AsEnumerable()
                     .Where(r => r["ID"].ToString() == id)
                     .ToList();
@@ -141,6 +172,31 @@ namespace MealPassCapstone.Desktop.Forms.Staff
         private void confirmBTN_Click(object sender, EventArgs e)
         {
             FormHelper.DisplayForm(new Staff.PaymentOptionForm());
+        }
+
+        private async void snacksBTN_Click(object sender, EventArgs e)
+        {
+            await LoadSnacksAsync();
+        }
+
+        private async void mealsBTN_Click(object sender, EventArgs e)
+        {
+            await LoadMealsAsync();
+        }
+
+        private async void drinksBTN_Click(object sender, EventArgs e)
+        {
+            await LoadDrinksAsync();
+        }
+
+        private async void allBTN_Click(object sender, EventArgs e)
+        {
+            await LoadProductsAsync();
+        }
+
+        private void findTE_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
+            productsGV.ApplyFindFilter(e.NewValue as string);
         }
     }
 }

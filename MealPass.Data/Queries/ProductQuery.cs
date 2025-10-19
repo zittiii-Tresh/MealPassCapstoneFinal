@@ -71,5 +71,45 @@ namespace MealPass.Data.Queries
                                               ON c.CategoryID = p.CategoryID
                                               LEFT JOIN pro.StockStatus ss
                                               ON ss.StockStatusID = p.StockStatusID;";
+
+        public static string FilterSnacks = @"SELECT p.ProductID 
+                                                  ,p.ProductName
+                                                  ,c.CategoryName
+                                                  ,ss.StockStatusName
+                                                  ,p.Quantity
+                                                  ,p.Price
+                                              FROM pro.Products p
+                                              LEFT JOIN pro.Category c
+                                              ON c.CategoryID = p.CategoryID
+                                              LEFT JOIN pro.StockStatus ss
+                                              ON ss.StockStatusID = p.StockStatusID
+                                              WHERE c.CategoryID = 1;";
+
+        public static string FilterDrinks = @"SELECT p.ProductID 
+                                                  ,p.ProductName
+                                                  ,c.CategoryName
+                                                  ,ss.StockStatusName
+                                                  ,p.Quantity
+                                                  ,p.Price
+                                              FROM pro.Products p
+                                              LEFT JOIN pro.Category c
+                                              ON c.CategoryID = p.CategoryID
+                                              LEFT JOIN pro.StockStatus ss
+                                              ON ss.StockStatusID = p.StockStatusID
+                                              WHERE c.CategoryID = 2;";
+
+        public static string FilterMeals = @"SELECT p.ProductID 
+                                                  ,p.ProductName
+                                                  ,c.CategoryName
+                                                  ,ss.StockStatusName
+                                                  ,p.Quantity
+                                                  ,p.Price
+                                              FROM pro.Products p
+                                              LEFT JOIN pro.Category c
+                                              ON c.CategoryID = p.CategoryID
+                                              LEFT JOIN pro.StockStatus ss
+                                              ON ss.StockStatusID = p.StockStatusID
+                                              WHERE c.CategoryID = 3;";
+
     }
 }

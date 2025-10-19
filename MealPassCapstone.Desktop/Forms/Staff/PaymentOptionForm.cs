@@ -19,14 +19,19 @@ namespace MealPassCapstone.Desktop.Forms.Staff
             InitializeComponent();
         }
 
-        private void mealpassBTN_Click(object sender, EventArgs e)
+        private void mealpassBTN_Click_1(object sender, EventArgs e)
         {
             FormHelper.DisplayForm(new Staff.ScanRFIDForm());
         }
 
-        private void cashBTN_Click(object sender, EventArgs e)
+        private void cashBTN_Click_1(object sender, EventArgs e)
         {
             FormHelper.DisplayForm(new Staff.CashOptionForm());
+        }
+
+        private void topupBTN_Click(object sender, EventArgs e)
+        {
+            FormHelper.DisplayForm(new Staff.TopUpForm());
         }
     }
 }

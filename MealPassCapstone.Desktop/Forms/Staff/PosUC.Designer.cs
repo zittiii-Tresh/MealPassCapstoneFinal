@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PosUC));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             sidePanel2 = new DevExpress.XtraEditors.SidePanel();
             sidePanel3 = new DevExpress.XtraEditors.SidePanel();
@@ -68,14 +68,14 @@
             labelControl7 = new DevExpress.XtraEditors.LabelControl();
             labelControl6 = new DevExpress.XtraEditors.LabelControl();
             labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            allBTN = new DevExpress.XtraEditors.SimpleButton();
+            drinksBTN = new DevExpress.XtraEditors.SimpleButton();
+            mealsBTN = new DevExpress.XtraEditors.SimpleButton();
             sidePanel12 = new DevExpress.XtraEditors.SidePanel();
             labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            findTE = new DevExpress.XtraEditors.TextEdit();
             labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            snacksBTN = new DevExpress.XtraEditors.SimpleButton();
             sidePanel11 = new DevExpress.XtraEditors.SidePanel();
             addtocartBTN = new DevExpress.XtraEditors.SimpleButton();
             sidePanel8 = new DevExpress.XtraEditors.SidePanel();
@@ -92,7 +92,7 @@
             sidePanel9.SuspendLayout();
             sidePanel13.SuspendLayout();
             sidePanel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)findTE.Properties).BeginInit();
             sidePanel11.SuspendLayout();
             SuspendLayout();
             // 
@@ -155,7 +155,7 @@
             cartGC.MainView = cartGV;
             cartGC.Name = "cartGC";
             cartGC.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { repositoryItemSpinEdit1, repositoryItemCancelBTN });
-            cartGC.Size = new System.Drawing.Size(471, 542);
+            cartGC.Size = new System.Drawing.Size(471, 559);
             cartGC.TabIndex = 1;
             cartGC.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { cartGV });
             // 
@@ -314,15 +314,15 @@
             // 
             repositoryItemCancelBTN.AllowFocused = false;
             repositoryItemCancelBTN.AutoHeight = false;
-            editorButtonImageOptions2.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("editorButtonImageOptions2.SvgImage");
-            repositoryItemCancelBTN.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
+            editorButtonImageOptions1.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("editorButtonImageOptions1.SvgImage");
+            repositoryItemCancelBTN.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default) });
             repositoryItemCancelBTN.Name = "repositoryItemCancelBTN";
             repositoryItemCancelBTN.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             repositoryItemCancelBTN.ButtonClick += repositoryItemCancelBTN_ButtonClick;
             // 
             // sidePanel7
             // 
-            sidePanel7.Appearance.BackColor = System.Drawing.Color.GhostWhite;
+            sidePanel7.Appearance.BackColor = System.Drawing.Color.SeaGreen;
             sidePanel7.Appearance.BorderColor = System.Drawing.Color.Gray;
             sidePanel7.Appearance.Options.UseBackColor = true;
             sidePanel7.Appearance.Options.UseBorderColor = true;
@@ -330,19 +330,19 @@
             sidePanel7.Controls.Add(confirmBTN);
             sidePanel7.Controls.Add(labelControl2);
             sidePanel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            sidePanel7.Location = new System.Drawing.Point(0, 542);
+            sidePanel7.Location = new System.Drawing.Point(0, 559);
             sidePanel7.Name = "sidePanel7";
-            sidePanel7.Size = new System.Drawing.Size(471, 127);
+            sidePanel7.Size = new System.Drawing.Size(471, 110);
             sidePanel7.TabIndex = 0;
             sidePanel7.Text = "sidePanel7";
             // 
             // grandtotalLBL
             // 
             grandtotalLBL.Appearance.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            grandtotalLBL.Appearance.ForeColor = System.Drawing.Color.FromArgb(64, 64, 64);
+            grandtotalLBL.Appearance.ForeColor = System.Drawing.Color.GreenYellow;
             grandtotalLBL.Appearance.Options.UseFont = true;
             grandtotalLBL.Appearance.Options.UseForeColor = true;
-            grandtotalLBL.Location = new System.Drawing.Point(345, 36);
+            grandtotalLBL.Location = new System.Drawing.Point(345, 27);
             grandtotalLBL.Name = "grandtotalLBL";
             grandtotalLBL.Size = new System.Drawing.Size(49, 23);
             grandtotalLBL.TabIndex = 7;
@@ -350,11 +350,13 @@
             // 
             // confirmBTN
             // 
-            confirmBTN.Appearance.BackColor = System.Drawing.Color.FromArgb(56, 107, 60);
+            confirmBTN.Appearance.BackColor = System.Drawing.Color.LightGreen;
             confirmBTN.Appearance.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            confirmBTN.Appearance.ForeColor = System.Drawing.Color.ForestGreen;
             confirmBTN.Appearance.Options.UseBackColor = true;
             confirmBTN.Appearance.Options.UseFont = true;
-            confirmBTN.Location = new System.Drawing.Point(345, 91);
+            confirmBTN.Appearance.Options.UseForeColor = true;
+            confirmBTN.Location = new System.Drawing.Point(345, 73);
             confirmBTN.Name = "confirmBTN";
             confirmBTN.Size = new System.Drawing.Size(120, 31);
             confirmBTN.TabIndex = 6;
@@ -364,10 +366,10 @@
             // labelControl2
             // 
             labelControl2.Appearance.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(27, 125, 79);
+            labelControl2.Appearance.ForeColor = System.Drawing.Color.Honeydew;
             labelControl2.Appearance.Options.UseFont = true;
             labelControl2.Appearance.Options.UseForeColor = true;
-            labelControl2.Location = new System.Drawing.Point(147, 32);
+            labelControl2.Location = new System.Drawing.Point(147, 22);
             labelControl2.Name = "labelControl2";
             labelControl2.Size = new System.Drawing.Size(142, 28);
             labelControl2.TabIndex = 1;
@@ -573,9 +575,9 @@
             sidePanel13.Controls.Add(labelControl7);
             sidePanel13.Controls.Add(labelControl6);
             sidePanel13.Controls.Add(labelControl5);
-            sidePanel13.Controls.Add(simpleButton6);
-            sidePanel13.Controls.Add(simpleButton3);
-            sidePanel13.Controls.Add(simpleButton2);
+            sidePanel13.Controls.Add(allBTN);
+            sidePanel13.Controls.Add(drinksBTN);
+            sidePanel13.Controls.Add(mealsBTN);
             sidePanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             sidePanel13.Location = new System.Drawing.Point(243, 0);
             sidePanel13.Name = "sidePanel13";
@@ -619,58 +621,61 @@
             labelControl5.TabIndex = 11;
             labelControl5.Text = "Meals";
             // 
-            // simpleButton6
+            // allBTN
             // 
-            simpleButton6.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
-            simpleButton6.AppearanceHovered.Options.UseBackColor = true;
-            simpleButton6.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
-            simpleButton6.AppearancePressed.Options.UseBackColor = true;
-            simpleButton6.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton6.ImageOptions.Image");
-            simpleButton6.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            simpleButton6.Location = new System.Drawing.Point(603, 48);
-            simpleButton6.Name = "simpleButton6";
-            simpleButton6.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            simpleButton6.Size = new System.Drawing.Size(81, 77);
-            simpleButton6.TabIndex = 10;
-            simpleButton6.Text = "simpleButton6";
+            allBTN.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
+            allBTN.AppearanceHovered.Options.UseBackColor = true;
+            allBTN.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
+            allBTN.AppearancePressed.Options.UseBackColor = true;
+            allBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("allBTN.ImageOptions.Image");
+            allBTN.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            allBTN.Location = new System.Drawing.Point(603, 48);
+            allBTN.Name = "allBTN";
+            allBTN.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            allBTN.Size = new System.Drawing.Size(81, 77);
+            allBTN.TabIndex = 10;
+            allBTN.Text = "simpleButton6";
+            allBTN.Click += allBTN_Click;
             // 
-            // simpleButton3
+            // drinksBTN
             // 
-            simpleButton3.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
-            simpleButton3.AppearanceHovered.Options.UseBackColor = true;
-            simpleButton3.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
-            simpleButton3.AppearancePressed.Options.UseBackColor = true;
-            simpleButton3.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton3.ImageOptions.Image");
-            simpleButton3.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            simpleButton3.Location = new System.Drawing.Point(366, 49);
-            simpleButton3.Name = "simpleButton3";
-            simpleButton3.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            simpleButton3.Size = new System.Drawing.Size(81, 77);
-            simpleButton3.TabIndex = 9;
-            simpleButton3.Text = "simpleButton3";
+            drinksBTN.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
+            drinksBTN.AppearanceHovered.Options.UseBackColor = true;
+            drinksBTN.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
+            drinksBTN.AppearancePressed.Options.UseBackColor = true;
+            drinksBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("drinksBTN.ImageOptions.Image");
+            drinksBTN.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            drinksBTN.Location = new System.Drawing.Point(366, 49);
+            drinksBTN.Name = "drinksBTN";
+            drinksBTN.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            drinksBTN.Size = new System.Drawing.Size(81, 77);
+            drinksBTN.TabIndex = 9;
+            drinksBTN.Text = "simpleButton3";
+            drinksBTN.Click += drinksBTN_Click;
             // 
-            // simpleButton2
+            // mealsBTN
             // 
-            simpleButton2.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
-            simpleButton2.AppearanceHovered.Options.UseBackColor = true;
-            simpleButton2.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
-            simpleButton2.AppearancePressed.Options.UseBackColor = true;
-            simpleButton2.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton2.ImageOptions.Image");
-            simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            simpleButton2.Location = new System.Drawing.Point(139, 48);
-            simpleButton2.Name = "simpleButton2";
-            simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            simpleButton2.Size = new System.Drawing.Size(81, 77);
-            simpleButton2.TabIndex = 8;
-            simpleButton2.Text = "simpleButton2";
+            mealsBTN.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
+            mealsBTN.AppearanceHovered.Options.UseBackColor = true;
+            mealsBTN.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
+            mealsBTN.AppearancePressed.Options.UseBackColor = true;
+            mealsBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("mealsBTN.ImageOptions.Image");
+            mealsBTN.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            mealsBTN.Location = new System.Drawing.Point(139, 48);
+            mealsBTN.Name = "mealsBTN";
+            mealsBTN.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            mealsBTN.Size = new System.Drawing.Size(81, 77);
+            mealsBTN.TabIndex = 8;
+            mealsBTN.Text = "simpleButton2";
+            mealsBTN.Click += mealsBTN_Click;
             // 
             // sidePanel12
             // 
             sidePanel12.BorderThickness = 0;
             sidePanel12.Controls.Add(labelControl4);
-            sidePanel12.Controls.Add(textEdit1);
+            sidePanel12.Controls.Add(findTE);
             sidePanel12.Controls.Add(labelControl1);
-            sidePanel12.Controls.Add(simpleButton1);
+            sidePanel12.Controls.Add(snacksBTN);
             sidePanel12.Dock = System.Windows.Forms.DockStyle.Left;
             sidePanel12.Location = new System.Drawing.Point(0, 0);
             sidePanel12.Name = "sidePanel12";
@@ -690,13 +695,14 @@
             labelControl4.TabIndex = 8;
             labelControl4.Text = "Snacks";
             // 
-            // textEdit1
+            // findTE
             // 
-            textEdit1.EditValue = "Find";
-            textEdit1.Location = new System.Drawing.Point(6, 165);
-            textEdit1.Name = "textEdit1";
-            textEdit1.Size = new System.Drawing.Size(190, 28);
-            textEdit1.TabIndex = 4;
+            findTE.EditValue = "";
+            findTE.Location = new System.Drawing.Point(6, 165);
+            findTE.Name = "findTE";
+            findTE.Size = new System.Drawing.Size(190, 28);
+            findTE.TabIndex = 4;
+            findTE.EditValueChanging += findTE_EditValueChanging;
             // 
             // labelControl1
             // 
@@ -710,22 +716,23 @@
             labelControl1.TabIndex = 0;
             labelControl1.Text = "Categories";
             // 
-            // simpleButton1
+            // snacksBTN
             // 
-            simpleButton1.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
-            simpleButton1.AppearanceHovered.Options.UseBackColor = true;
-            simpleButton1.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
-            simpleButton1.AppearancePressed.Options.UseBackColor = true;
-            simpleButton1.BackgroundImage = (System.Drawing.Image)resources.GetObject("simpleButton1.BackgroundImage");
-            simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            simpleButton1.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("simpleButton1.ImageOptions.Image");
-            simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            simpleButton1.Location = new System.Drawing.Point(154, 48);
-            simpleButton1.Name = "simpleButton1";
-            simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            simpleButton1.Size = new System.Drawing.Size(81, 77);
-            simpleButton1.TabIndex = 7;
-            simpleButton1.Text = "simpleButton1";
+            snacksBTN.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
+            snacksBTN.AppearanceHovered.Options.UseBackColor = true;
+            snacksBTN.AppearancePressed.BackColor = System.Drawing.Color.FromArgb(84, 84, 84);
+            snacksBTN.AppearancePressed.Options.UseBackColor = true;
+            snacksBTN.BackgroundImage = (System.Drawing.Image)resources.GetObject("snacksBTN.BackgroundImage");
+            snacksBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            snacksBTN.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("snacksBTN.ImageOptions.Image");
+            snacksBTN.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            snacksBTN.Location = new System.Drawing.Point(154, 48);
+            snacksBTN.Name = "snacksBTN";
+            snacksBTN.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            snacksBTN.Size = new System.Drawing.Size(81, 77);
+            snacksBTN.TabIndex = 7;
+            snacksBTN.Text = "simpleButton1";
+            snacksBTN.Click += snacksBTN_Click;
             // 
             // sidePanel11
             // 
@@ -796,7 +803,7 @@
             sidePanel13.PerformLayout();
             sidePanel12.ResumeLayout(false);
             sidePanel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)textEdit1.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)findTE.Properties).EndInit();
             sidePanel11.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -818,16 +825,16 @@
         private DevExpress.XtraEditors.SidePanel sidePanel10;
         private DevExpress.XtraGrid.GridControl productsGC;
         private DevExpress.XtraGrid.Views.Grid.GridView productsGV;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit findTE;
         private DevExpress.XtraEditors.SimpleButton confirmBTN;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SidePanel sidePanel11;
         private DevExpress.XtraEditors.SidePanel sidePanel12;
         private DevExpress.XtraEditors.SidePanel sidePanel13;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton snacksBTN;
+        private DevExpress.XtraEditors.SimpleButton allBTN;
+        private DevExpress.XtraEditors.SimpleButton drinksBTN;
+        private DevExpress.XtraEditors.SimpleButton mealsBTN;
         private DevExpress.XtraEditors.SimpleButton addtocartBTN;
         private DevExpress.XtraEditors.LabelControl grandtotalLBL;
         private DevExpress.XtraGrid.Columns.GridColumn ID;

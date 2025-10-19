@@ -291,6 +291,7 @@
             purchasehistoryACE.Name = "purchasehistoryACE";
             purchasehistoryACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             purchasehistoryACE.Text = "Purchase History";
+            purchasehistoryACE.Click += purchasehistoryACE_Click;
             // 
             // topuphistoryACE
             // 
@@ -317,6 +318,7 @@
             posACE.Name = "posACE";
             posACE.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             posACE.Text = "POS";
+            posACE.Click += posACE_Click;
             // 
             // mainSPanel
             // 
